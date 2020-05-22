@@ -42,7 +42,7 @@
     transition: width .4s;
 }
 
-.nav-link:last-child:hover::after{
+.nav-item:last-child .nav-link:hover::after{
 	width:0;
 }
 
@@ -130,10 +130,6 @@ body{
     animation: underline 5s infinite
 }
 
-/*.underline-footer:hover::after {
-    width: 100%;
-    transition: width .4s;
-}*/
 
 @keyframes underline{
 	0%{
