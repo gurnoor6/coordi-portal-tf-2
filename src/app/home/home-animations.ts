@@ -20,19 +20,35 @@ export const fade=(
 )
 
 export const slide=(
-
 	trigger('slide',[
-
 		transition(':enter',animate('0.5s ease-in',keyframes([
 			style({opacity:"0",transform:"translateX(600px)",offset:0.0}),
 			style({opacity:"0.3",transform:"translateX(300px)",offset:0.7}),
 			style({opacity:"1",transform:"translateX(0px)",offset:1.0}),
 		]))),
-
-
-
-
 	])
+)
 
+export const animateHead=(
+	trigger('animateHead',[
+		transition(':enter',animate('1s ease-out',keyframes([
+			style({opacity:"0",transform:"translateX(-600px)",offset:0.0}),
+			style({opacity:"0",transform:"translateX(-600px)",offset:0.5}),
+			style({opacity:"0.3",transform:"translateX(-300px)",offset:0.65}),
+			style({opacity:"1",transform:"translateX(0px)",offset:1.0}),
 
+		]))),
+	])
+)
+
+export const animateContent=(
+	trigger('animateContent',[
+		transition(':enter',animate('1s ease-out',keyframes([
+			style({opacity:"0",transform:"translateX(600px)",offset:0.0}),
+			style({opacity:"0",transform:"translateX(600px)",offset:0.5}),
+			style({opacity:"0.3",transform:"translateX(300px)",offset:0.65}),
+			style({opacity:"1",transform:"translateX(0px)",offset:1.0}),
+
+		]))),
+	])
 )

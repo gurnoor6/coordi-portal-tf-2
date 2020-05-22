@@ -1,3 +1,23 @@
+/******xperimental*****/
+.blur-div{
+	position:relative;
+	cursor: pointer;
+}
+
+.blur{
+	width:110%;
+	transform: translateX(-5%);
+	position:absolute;
+	min-height:100%;
+	background-color: #fff;
+	filter:blur(1px);
+	opacity:0.5;
+	border-radius: 25px;
+}
+
+/*********************/
+
+
 .logo{
 	width:300px;
 	object-fit: cover;
@@ -6,6 +26,27 @@
 .transparent-nav{
 	background-color: transparent !important;
 }
+
+/****Underline Effect*****/
+.nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .2s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .4s;
+}
+
+.nav-link:last-child:hover::after{
+	width:0;
+}
+
+/*************************/
 
 body{
 	background: url("/assets/backg.jpg");
@@ -30,6 +71,7 @@ body{
 	}
 }
 
+/********NAVBAR************/
 .nav-item .nav-link{
 	color:#ffffff;
 	opacity: 1;
@@ -40,6 +82,11 @@ body{
 .nav-item{
 	padding-left:12px;
 	padding-right:12px ;
+}
+
+.navbar-toggler:focus{
+	outline: none;
+	box-shadow: none;
 }
 
 .main-container{
@@ -72,8 +119,58 @@ body{
 	margin-left:32px;
 }
 
+/******Footer Underline*********/
+.underline-footer::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .2s;
+    animation: underline 5s infinite
+}
+
+/*.underline-footer:hover::after {
+    width: 100%;
+    transition: width .4s;
+}*/
+
+@keyframes underline{
+	0%{
+		width:100%;
+	}
+
+	50%{
+		width:100%;
+		transform: translateX(500px);
+		opacity:0;
+	}
+	51%{
+		width:100%;
+		transform: translateX(-400px);
+		opacity:0;
+	}
+
+	52%{
+		opacity:1;
+	}
+
+	100%{
+		width:100%;
+		transform: translateX(0);
+	}
+}
+
+/******************************/
+
+
 @media screen and (max-width:675px){
 	.main-container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.main-container-mobile{
 		padding-left: 24px;
 		padding-right: 24px;
 	}

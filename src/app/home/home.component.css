@@ -20,8 +20,39 @@
 	display: inline-block;
 }
 
+#cpimg{
+	height:68px;
+	object-fit: cover;
+}
+
+#whytf:before{
+  content: '\2807';
+  font-size: 64px;
+}
+
+@media screen and (max-width:1080px){
+	#cpimg{
+		height:56px;
+	}
+}
+
+@media screen and (max-width:900px){
+	#cpimg{
+		height:48px;
+	}
+}
+
+@media screen and (max-width:900px){
+	#cpimg{
+		width:100%;
+		object-fit: contain;
+	}
+}
+
+
+
 @media screen and (max-width:675px){
-	.head{
+	.head,#whytf:before{
 		font-size: 32px;
 	}
 

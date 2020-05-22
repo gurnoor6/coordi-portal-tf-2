@@ -1,6 +1,6 @@
 <body>
 <div class="main-container">
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark transparent-nav">
+<nav @navAnimation class="navbar navbar-expand-lg bg-dark navbar-dark transparent-nav">
   <!-- Brand -->
   <a class="navbar-brand" href="/"><img src="assets/logo.png" class="logo"></a>
 
@@ -10,34 +10,45 @@
   </button>
 
   <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="changeScreen('home')">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="changeScreen('whytf')">WHY TF</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">DEPARTMENTS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">COORDIE MEMORIES</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">REGISTER</a>
-      </li>
-    </ul>
-  </div>
+
+    <div class="collapse navbar-collapse main-container-mobile" id="collapsibleNavbar">
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="changeScreen('home')">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="changeScreen('whytf')">WHY TF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">DEPARTMENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">COORDIE MEMORIES</a>
+        </li>
+        <li class="nav-item">
+          <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
+            <div class="blur">
+              <a class="nav-link" href="#" id="register" style="min-height:100%;width:100%;position:absolute"></a>
+            </div>
+            <div [@tR]="stateRegister" class="blur-text">
+              <a  class="nav-link" (@tR.done)="log($event)">REGISTER</a>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  
 </nav>
 
-
+<div class="main-container-mobile">
   <app-home></app-home>
 
    
-    <div class="footer row">
+    <div @footerAnimation class="footer row">
       <div class="col-12 col-lg-6" *ngIf="smallWidth">
-         <p class="footer-text text-lg-right text-center">RESULT OF REVERSE VIDEO CHALLENGE</p>
+         <p class="footer-text text-lg-right text-center"><span class=" underline-footer d-inline-block" style="overflow-x: hidden">RESULT OF REVERSE VIDEO CHALLENGE</span></p>
       </div>
       <div class="col-12 col-lg-6 text-center text-lg-left">
           <span class="fa fa-twitter"></span>
@@ -46,7 +57,7 @@
           <span class="fa fa-instagram"></span>
       </div>
       <div class="col-12 col-lg-6" *ngIf="!smallWidth">
-        <p class="footer-text text-lg-right text-center">RESULT OF REVERSE VIDEO CHALLENGE</p>
+        <p class="footer-text text-lg-right text-center" ><span class=" underline-footer d-inline-block" style="overflow-x: hidden">RESULT OF REVERSE VIDEO CHALLENGE</span></p>
       </div>
     </div>
 
@@ -54,6 +65,6 @@
 
 
 
-
+</div>
 </div>
 </body>

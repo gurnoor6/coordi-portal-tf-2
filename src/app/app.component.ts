@@ -1,13 +1,20 @@
 import { Component,OnInit } from '@angular/core';
 import {CurrentscreenService} from './currentscreen.service';
+import {translateRight,navAnimation,footerAnimation} from './app-animations';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations:[
+    translateRight,
+    navAnimation,
+    footerAnimation
+  ]
 })
 export class AppComponent implements OnInit {
   title = 'coordiportal';
   smallWidth=false;
+  stateRegister='show';
   constructor(private cs : CurrentscreenService){}
   ngOnInit(){
   	setInterval(()=>{this.changeOrder()});
@@ -21,6 +28,14 @@ export class AppComponent implements OnInit {
   changeScreen(name){
   	console.log(name);
   	this.cs.setCurrentScreen(name);
+  }
+
+  toggleTrigger(){
+    this.stateRegister=='hide'?this.stateRegister='show':this.stateRegister='hide';
+  }
+
+  log(e){
+    console.log(e);
   }
 
 }
