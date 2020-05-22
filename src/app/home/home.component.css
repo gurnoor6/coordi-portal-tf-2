@@ -1,0 +1,32 @@
+.head{
+	font-size: 64px;
+	color: #ffffff;
+	font-weight:bold;
+}
+
+.main-div{
+	margin-top:48px;
+}
+
+.description-text{
+	color:#ffffff;
+	font-size:24px;
+}
+.line{
+	/*width:20px;*/
+	border-left:64px solid #ffffff;
+	height:2px;
+	margin-top: 16px;
+	display: inline-block;
+}
+
+@media screen and (max-width:675px){
+	.head{
+		font-size: 32px;
+	}
+
+	.description-text{
+		font-size:16px;
+	}
+}
+
