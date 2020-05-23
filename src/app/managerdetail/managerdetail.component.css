@@ -1,0 +1,62 @@
+.head-text{
+	font-size:64px;
+	color:#fff;
+	margin-bottom:0;
+}
+
+.head-row{
+	border-bottom:2px solid #fff;
+}
+
+.cross{
+	height:30px;
+	width:30px;
+	text-align: right;
+	margin-top:50%;
+	transform: rotate(0);
+	transition: 0.5s;
+}
+
+.cross:hover{
+	transform: rotate(90deg);
+	transition: 0.5s;
+}
+
+.manager-img{
+	width:100%;
+	object-fit:cover;
+	object-position: top;
+	max-height: 300px;
+	margin-top: 32px;
+}
+
+.manager-name,.manager-num{
+	font-size:24px;
+	color:#ffffff;
+}
+
+.manager-name{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.manager-col{
+	border-bottom:2px solid #fff;
+}
+
+.fa{
+	font-size: 32px;
+	color:#ffffff;
+	border:1px solid #ffffff;
+	border-radius: 100%; 
+	height:56px; 
+	width:56px; 
+	text-align: center;
+	padding-top:10px;
+	margin-right:24px;
+	opacity:0.5;
+}
+
+.fa:nth-child(1){
+	margin-left:32px;
+}

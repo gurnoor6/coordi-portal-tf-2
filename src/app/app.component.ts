@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   title = 'coordiportal';
   smallWidth=false;
   stateRegister='show';
+  footer=true;
   constructor(private cs : CurrentscreenService){}
   ngOnInit(){
   	setInterval(()=>{this.changeOrder()});
@@ -23,6 +24,8 @@ export class AppComponent implements OnInit {
 
   changeOrder(){	
   	(window.innerWidth<992)?this.smallWidth=true:this.smallWidth=false;
+    if(window.location.href.includes('managerdetail'))
+      this.footer=false;
   }
 
   changeScreen(name){
