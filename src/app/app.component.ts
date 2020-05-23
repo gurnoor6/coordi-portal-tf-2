@@ -26,11 +26,33 @@ export class AppComponent implements OnInit {
   	(window.innerWidth<992)?this.smallWidth=true:this.smallWidth=false;
     if(window.location.href.includes('managerdetail') || window.location.href.includes('memories') )
       this.footer=false;
+
+    if(window.location.href.includes('memories')){
+      let navlinks = document.querySelectorAll('.nav-link');
+      navlinks.forEach(function(item){
+        item.classList.remove('active');
+      });
+      document.querySelector('#memories').classList.add('active');
+    }
+
+    if(window.location.href.includes('department')){
+      let navlinks = document.querySelectorAll('.nav-link');
+      navlinks.forEach(function(item){
+        item.classList.remove('active');
+      });
+      document.querySelector('#departments').classList.add('active');
+    }
+
   }
 
-  changeScreen(name){
+  changeScreen(event,name){
   	console.log(name);
   	this.cs.setCurrentScreen(name);
+    let navlinks = document.querySelectorAll('.nav-link');
+    navlinks.forEach(function(item){
+      item.classList.remove('active');
+    });
+    event.target.classList.add('active');
   }
 
   toggleTrigger(){

@@ -46,6 +46,11 @@
 	width:0;
 }
 
+.nav-link.active::after {
+    width: 100%;
+    transition: width .4s;
+}
+
 /*************************/
 
 body{

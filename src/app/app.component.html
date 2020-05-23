@@ -15,16 +15,16 @@
       
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="changeScreen('home')">HOME</a>
+          <a class="nav-link active" href="#" (click)="changeScreen($event,'home')">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="changeScreen('whytf')">WHY TF</a>
+          <a class="nav-link" href="#" (click)="changeScreen($event,'whytf')">WHY TF</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/departments">DEPARTMENTS</a>
+          <a class="nav-link" href="/departments" id="departments">DEPARTMENTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/memories">COORDIE MEMORIES</a>
+          <a class="nav-link" href="/memories" id="memories">COORDIE MEMORIES</a>
         </li>
         <li class="nav-item">
           <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
