@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./managerdetail.component.css']
 })
 export class ManagerdetailComponent implements OnInit {
-
+  managers="events";
   constructor() { }
 
   ngOnInit(): void {

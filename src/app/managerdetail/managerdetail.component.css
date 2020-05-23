@@ -53,10 +53,11 @@
 	width:56px; 
 	text-align: center;
 	padding-top:10px;
-	margin-right:24px;
-	opacity:0.5;
+	margin-right:14px;
+	opacity:0.8;
 }
 
-.fa:nth-child(1){
-	margin-left:32px;
+.fa:last-child{
+	margin-right: 0;
 }
+
