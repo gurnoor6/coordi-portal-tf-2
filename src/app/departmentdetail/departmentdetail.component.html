@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 col-md-4">
+			<img src="https://2.bp.blogspot.com/-o2SQ5ese8LE/TsffylIGjoI/AAAAAAAAAMo/NEi1qkJDkf8/s1600/DSC_0464.JPG" style="width:100%; object-fit: cover;margin-top: 20%">
+		</div>
+		<div class="col-12 col-md-7">
+			<div class="text">
+				<p class="head text-uppercase">{{current_event.name}}</p>
+				<p class="description">
+					{{current_event.description}}
+				</p>
+				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right"  >
+	            <div class="blur">
+	              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
+	            </div>
+	            <div [@tR]="stateRegister" class="blur-text">
+	              <a  class="text-uppercase text-white button-text" (@tR.done)="log($event)">Your manager peeps</a>
+	            </div>
+	          </div>
+
+			</div>
+		</div>
+		<div class="col-md-1 d-none d-md-block indicators">
+			<p class="circle active " (click)="showActive($event,0)"></p>
+			<p class="circle " (click)="showActive($event,1)"></p>
+			<p class="circle " (click)="showActive($event,2)"></p>
+			<p class="circle " (click)="showActive($event,3)"></p>
+			<p class="circle " (click)="showActive($event,4)"></p>
+			<p class="circle " (click)="showActive($event,5)"></p>
+		</div>
+	</div>
+</div>

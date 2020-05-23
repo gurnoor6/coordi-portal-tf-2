@@ -1,0 +1,23 @@
+.image{
+
+  height: 250px;
+  width:100%;
+  object-fit: cover;
+}
+
+.image:nth-child(odd){
+  /*transform: rotate3d(60deg,60deg ,30deg);*/
+}
+
+.index{
+  font-size: 24px;
+
+}
+
+.index{
+  border-bottom:1px solid #ffffff;
+}
+
+.name{
+  font-size: 32px;
+}

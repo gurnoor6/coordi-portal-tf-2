@@ -21,7 +21,7 @@
           <a class="nav-link" href="#" (click)="changeScreen('whytf')">WHY TF</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">DEPARTMENTS</a>
+          <a class="nav-link" href="/departments">DEPARTMENTS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">COORDIE MEMORIES</a>
@@ -43,7 +43,9 @@
 </nav>
 
 <div class="main-container-mobile">
-  <app-home></app-home>
+
+  <!-- <app-home></app-home> -->
+  <router-outlet></router-outlet>
 
    
     <div @footerAnimation class="footer row">
