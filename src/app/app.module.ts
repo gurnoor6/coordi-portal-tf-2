@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentdetailComponent } from './departmentdetail/departmentdetail.component';
 import { ManagerdetailComponent } from './managerdetail/managerdetail.component';
+import { CoordimemoriesComponent } from './coordimemories/coordimemories.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ManagerdetailComponent } from './managerdetail/managerdetail.component'
     HomeComponent,
     DepartmentsComponent,
     DepartmentdetailComponent,
-    ManagerdetailComponent
+    ManagerdetailComponent,
+    CoordimemoriesComponent
   ],
   imports: [
     BrowserModule,

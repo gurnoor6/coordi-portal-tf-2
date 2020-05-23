@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
   changeOrder(){	
   	(window.innerWidth<992)?this.smallWidth=true:this.smallWidth=false;
-    if(window.location.href.includes('managerdetail'))
+    if(window.location.href.includes('managerdetail') || window.location.href.includes('memories') )
       this.footer=false;
   }
 

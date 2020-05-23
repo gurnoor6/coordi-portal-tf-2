@@ -1,0 +1,21 @@
+.coordi-image{
+	width:90%;
+	object-fit: cover;
+	max-height:250px;
+	object-position: top;
+}
+
+.coordi-text{
+	border-top:2px solid #fff;
+	padding-top:8px;
+}
+
+.description-text{
+	color:#fff;
+	font-size: 24px;
+}
+
+.name{
+	color:#fff;
+	font-size: 24px;
+}
