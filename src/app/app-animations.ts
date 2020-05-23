@@ -5,7 +5,7 @@ export const translateRight=(
 	trigger('tR',[
 
 		transition('show=>hide',animate('.5s',keyframes([
-			style({opacity:"0.5",transform:"translateX(20px)",offset:0.1}),
+			style({opacity:"0.5",transform:"translateX(50px)",offset:0.1}),
 			style({opacity:"0",offset:0.3}),
 			style({transform:"translateX(-100px)",offset:0.4}),
 			style({transform:"translateX(-50px)",opacity:"0.5",offset:0.6}),
@@ -13,7 +13,7 @@ export const translateRight=(
 		]))),
 
 		transition('hide=>show',animate('.5s',keyframes([
-			style({opacity:"0.5",transform:"translateX(-20px)",offset:0.1}),
+			style({opacity:"0.5",transform:"translateX(-50px)",offset:0.1}),
 			style({opacity:"0",offset:0.3}),
 			style({transform:"translateX(100px)",offset:0.4}),
 			style({transform:"translateX(50px)",opacity:"0.5",offset:0.6}),
