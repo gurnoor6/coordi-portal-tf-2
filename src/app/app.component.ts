@@ -1,6 +1,9 @@
 import { Component,OnInit } from '@angular/core';
 import {CurrentscreenService} from './currentscreen.service';
-import {translateRight,navAnimation,footerAnimation} from './app-animations';
+import {translateRight,navAnimation,footerAnimation,routeAnimate} from './app-animations';
+import { RouterOutlet,ActivatedRoute, Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +11,8 @@ import {translateRight,navAnimation,footerAnimation} from './app-animations';
   animations:[
     translateRight,
     navAnimation,
-    footerAnimation
+    footerAnimation,
+    routeAnimate
   ]
 })
 export class AppComponent implements OnInit {
@@ -16,7 +20,9 @@ export class AppComponent implements OnInit {
   smallWidth=false;
   stateRegister='show';
   footer=true;
-  constructor(private cs : CurrentscreenService){}
+  constructor(private cs : CurrentscreenService,
+              private route : ActivatedRoute,
+              private router:Router){}
   ngOnInit(){
   	setInterval(()=>{this.changeOrder()});
   }
@@ -48,6 +54,7 @@ export class AppComponent implements OnInit {
   changeScreen(event,name){
   	console.log(name);
   	this.cs.setCurrentScreen(name);
+    this.router.navigate([''])
     let navlinks = document.querySelectorAll('.nav-link');
     navlinks.forEach(function(item){
       item.classList.remove('active');
@@ -63,4 +70,12 @@ export class AppComponent implements OnInit {
     console.log(e);
   }
 
+  prepareRoute(outlet: RouterOutlet) {
+    // console.log(outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'])
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+
+  redirect(path){
+    this.router.navigate([path]);
+  }
 }

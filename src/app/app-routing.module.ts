@@ -8,8 +8,8 @@ import {CoordimemoriesComponent} from './coordimemories/coordimemories.component
 
 
 const routes: Routes = [
-{path:'',component:HomeComponent},
-{path:'departments',component:DepartmentsComponent},
+{path:'',component:HomeComponent,data:{animation:'home'}},
+{path:'departments',component:DepartmentsComponent,data:{animation:'department'}},
 {path:'departmentdetail',component:DepartmentdetailComponent},
 {path:'managerdetail/:dep',component:ManagerdetailComponent},
 {path:'memories',component:CoordimemoriesComponent}

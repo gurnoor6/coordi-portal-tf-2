@@ -1,6 +1,7 @@
 
 import { Component, ViewChild,OnInit } from '@angular/core';
 import Glide from '@glidejs/glide';
+import {ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-departments',
@@ -8,10 +9,9 @@ import Glide from '@glidejs/glide';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
-  constructor() { }
+  constructor(private route: ActivatedRoute,private router: Router) { }
   ngOnInit(): void {
   	const config = {
-  		type:'carousel',
   		perView:3,
   		gap:64,
   		breakpoints:{
@@ -43,7 +43,7 @@ export class DepartmentsComponent implements OnInit {
   }
 
   redirect(link){
-  	window.location.href = link;
+  	 this.router.navigate([link]);
   }
 
 

@@ -1,6 +1,6 @@
 .image{
 
-  height: 250px;
+  height: 300px;
   width:100%;
   object-fit: cover;
 }
@@ -161,7 +161,7 @@
 }
 
 .border-white{
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   transition:0.2s ease-out;
 }
 

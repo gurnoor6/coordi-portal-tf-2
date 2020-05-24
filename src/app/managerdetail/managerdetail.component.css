@@ -12,7 +12,7 @@
 	height:30px;
 	width:30px;
 	text-align: right;
-	margin-top:50%;
+	margin-top:15%;
 	transform: rotate(0);
 	transition: 0.5s;
 	cursor:pointer;
@@ -62,6 +62,14 @@
 	margin-right: 0;
 }
 
+/*****Image headings*******/
+.image-head{
+	margin-bottom: -16px;
+}
+
+#events-cross{
+	margin-top:12.5%;
+}
 
 @media screen and (max-width:675px){
 	.head-text{
@@ -71,7 +79,18 @@
 	.cross{
 		height:16px;
 		width:16px;
-		margin-top:10%;
+		transform: translateY(0px);
+	}
+
+	.image-head{
+		height:30px;
+		object-fit: cover;
+		margin-bottom: -16px;
+		margin-left: -16px;
+	}
+
+	#events-cross{
+		margin-top:50%;
 	}
 
 }

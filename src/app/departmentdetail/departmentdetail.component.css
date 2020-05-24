@@ -31,7 +31,12 @@
 }
 
 .indicators{
-	padding-top: 10%;
+	padding-top: 2%;
+	padding-left:4%;
+}
+
+.indicators img,.indicators .circle, .cross{
+	cursor:pointer;
 }
 
 .blur-div{
@@ -70,6 +75,16 @@
 	transform: rotate(90deg);
 	transition: 0.5s;
 }
+
+.multiple-pics,.single-pics{
+	animation: fader 0.5s ease-in;
+}
+
+@keyframes fader{
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
 
 @media screen and (max-width:675px){
 	.head,.head:before{

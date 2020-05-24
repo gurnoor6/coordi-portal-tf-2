@@ -1,16 +1,17 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-12 col-md-4">
-			<img src="https://2.bp.blogspot.com/-o2SQ5ese8LE/TsffylIGjoI/AAAAAAAAAMo/NEi1qkJDkf8/s1600/DSC_0464.JPG" style="width:100%; object-fit: cover;margin-top: 20%">
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
+			<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
+			<img src="assets/multiple_photos.png" (mouseleave) = "showOtherImage()" [class.d-none]="!multiple" style="width:100%; object-fit: cover;margin-top: 0%" class="multiple-pics">
 		</div>
-		<div class="col-12 col-md-7">
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-7">
 			<div class="text">
 				<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
 					<div class="col-10">
 						<p class="head text-uppercase" style="margin-bottom:0">{{current_event.name}}</p>
 					</div>
 					<div class="col-2 text-right">
-					 	<p><img class="cross" src="/assets/cross.png"></p>
+					 	<p><img class="cross" src="/assets/cross.png" (click)="redirectTo('departments')"></p>
 					 </div>
 				</div>
 				<p class="description">
@@ -28,12 +29,13 @@
 			</div>
 		</div>
 		<div class="col-md-1 d-none d-md-block indicators">
+			<p><img src="assets/up.png" (click)="changeEvent('showPrevious')" style="height:100px;width:100px"></p>
 			<p class="circle active " (click)="showActive($event,0)"></p>
 			<p class="circle " (click)="showActive($event,1)"></p>
 			<p class="circle " (click)="showActive($event,2)"></p>
 			<p class="circle " (click)="showActive($event,3)"></p>
 			<p class="circle " (click)="showActive($event,4)"></p>
-			<p class="circle " (click)="showActive($event,5)"></p>
+			<p><img src="assets/down.png" (click)="changeEvent('show')" style="height:100px;width:100px"></p>
 		</div>
 	</div>
 </div>
