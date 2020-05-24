@@ -121,5 +121,9 @@
 		opacity:0.2;
 		border-radius: 25px;
 	}
+
+	.mobile{
+		margin-bottom: 100px;
+	}
 }
 

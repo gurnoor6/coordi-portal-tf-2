@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet,ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
   mobile=false;
-  constructor() { }
+  constructor(private route : ActivatedRoute,
+              private router:Router) { }
 
   ngOnInit(): void {
   	setInterval(()=>this.intervalFn());
@@ -19,6 +21,10 @@ export class ResultsComponent implements OnInit {
   		this.mobile=true;
   	else
   		this.mobile=false;
+  }
+
+  redirect(path){
+    this.router.navigate([path]);
   }
 
 }

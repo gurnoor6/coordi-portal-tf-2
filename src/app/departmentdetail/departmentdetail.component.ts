@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {events} from './events';
+import {events,creatives} from './events';
 import {translateRight,navAnimation,footerAnimation} from '../app-animations';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {fade} from './department-animations';
@@ -22,11 +22,16 @@ export class DepartmentdetailComponent implements OnInit {
   multiple=false;
   animation_origin;
   mobile=false;
+  creatives=false;
   constructor(private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
 	    console.log(params['dep']);
+	    if(params['dep']=='creatives'){
+	    	this.creatives=true;
+	    	this.events = creatives;
+	    }
 	  });
 
   	setInterval(()=>{this.intervalFunction()});
@@ -99,6 +104,7 @@ export class DepartmentdetailComponent implements OnInit {
   }
 
   redirectTo(path){
+  	console.log(path);
   	 this.router.navigate([path]);
   }
 
