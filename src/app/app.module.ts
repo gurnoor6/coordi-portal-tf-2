@@ -13,6 +13,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxGlideModule } from 'ngx-glide';
+import { ResultsComponent } from './results/results.component';
 
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -27,7 +28,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     DepartmentsComponent,
     DepartmentdetailComponent,
     ManagerdetailComponent,
-    CoordimemoriesComponent
+    CoordimemoriesComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

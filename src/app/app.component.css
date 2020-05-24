@@ -170,6 +170,9 @@ body{
     animation: underline 5s infinite
 }
 
+.results-div:hover{
+	cursor: pointer;
+}
 
 @keyframes underline{
 	0%{
