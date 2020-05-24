@@ -8,6 +8,15 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { DepartmentdetailComponent } from './departmentdetail/departmentdetail.component';
 import { ManagerdetailComponent } from './managerdetail/managerdetail.component';
 import { CoordimemoriesComponent } from './coordimemories/coordimemories.component';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
 
 @NgModule({
   declarations: [
@@ -22,8 +31,15 @@ import { CoordimemoriesComponent } from './coordimemories/coordimemories.compone
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxUsefulSwiperModule,
+    SwiperModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
