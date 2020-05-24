@@ -241,3 +241,9 @@ body{
 		padding-right:0px ;
 	}
 }
+
+@media screen and (max-width:675px){
+	.footer{
+		margin-top: 32px;
+	}
+}
