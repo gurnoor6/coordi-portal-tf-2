@@ -40,4 +40,8 @@ export class DepartmentdetailComponent implements OnInit {
     console.log(e);
   }
 
+  redirectTo(name){
+  	window.location.href = name;
+  }
+
 }

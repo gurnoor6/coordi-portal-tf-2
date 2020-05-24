@@ -16,4 +16,8 @@ export class ManagerdetailComponent implements OnInit {
 	  });
   }
 
+   redirectTo(name){
+  	window.location.href = name;
+  }
+
 }
