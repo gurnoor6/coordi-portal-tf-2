@@ -28,10 +28,49 @@
 	text-align: right;
 }
 
+.memory-row:nth-child(odd) .name::before{
+	content:"-";
+}
+
+.memory-row:nth-child(even) .name::after{
+	content:"-";
+}
+
+
 .memory-row:nth-child(even) .description-text{
 	text-align: right;
 }
 
 .memory-row:nth-child(odd) .right-image{
 	display: none;
+}
+
+@media screen and (max-width:675px){
+	.memory-row:nth-child(even) .left-image{
+		display: initial;
+	}
+
+	.memory-row:nth-child(odd) .name{
+		text-align: center;
+	}
+
+	.memory-row:nth-child(even) .description-text{
+		text-align: center;
+	}
+
+	.memory-row:nth-child(odd) .name::before{
+		content:"";
+	}
+
+	.memory-row:nth-child(even) .name::after{
+		content:"";
+	}
+
+	.memory-row:nth-child(even) .right-image{
+		display: none;
+	}
+
+	.coordi-text{
+		text-align: center;
+	}
 }
