@@ -21,12 +21,15 @@ export class DepartmentdetailComponent implements OnInit {
   trigger;
   multiple=false;
   animation_origin;
+  mobile=false;
   constructor(private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
 	    console.log(params['dep']);
 	  });
+
+  	setInterval(()=>{this.intervalFunction()});
   }
 
   showActive(event,index){
@@ -97,6 +100,16 @@ export class DepartmentdetailComponent implements OnInit {
 
   redirectTo(path){
   	 this.router.navigate([path]);
+  }
+
+  intervalFunction(){
+  	if(window.innerWidth<675){
+  		this.mobile=true;
+  	}
+
+  	else{
+  		this.mobile=false;
+  	}
   }
 
 }
