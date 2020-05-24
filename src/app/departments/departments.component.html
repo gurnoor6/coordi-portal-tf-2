@@ -1,109 +1,10 @@
-
-<!-- <div class="container">
-  <div class="row mt-5">
-    <div class="col-12 col-md-4 department-div" >
-      <div class="image" style="background: url('/assets/nature-1.jpg')">
-      </div>
-      <div class="index text-center text-white">
-        01
-      </div>
-      <div class="name text-uppercase text-center text-white">
-        events
-      </div>
-    </div>
-   <div class="col-12 col-md-4 department-div" >
-      <div class="image" style="background: url('/assets/nature-2.jpg')">
-      </div>
-      <div class="index text-center text-white">
-        02
-      </div>
-      <div class="name text-uppercase text-center text-white">
-        creatives
-      </div>
-    </div>
-    <div class="col-12 col-md-4 department-div" >
-      <div class="image" style="background: url('/assets/nature-3.jpg')">
-      </div>
-      <div class="index text-center text-white">
-        03
-      </div>
-      <div class="name text-uppercase text-center text-white">
-        web
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- 
-<div class="box-container" fxLayout="column" style="min-height: 800px;">
-  <div class="app-title">Simple example app for the ngx-swiper-wrapper</div>
-
-  <div class="info-container">
-    You can change the basic settings of the Swiper area by clicking the buttons on the controls pane.
-  </div>
-
-  <div class="horizontal-container" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="stretch" fxFlex="auto">
-    <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
-      <div class="box-title">Controls</div>
-
-      <div class="action-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleType()'>{{(type == "component") ? "Switch to directive" : "Switch to component"}}</div>
-
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleDirection()'>{{(config.direction == "horizontal") ? "Change to vertical" : "Change to horizontal"}}</div>
-
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleSlidesPerView()'>Toggle slides per view</div>
-
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleOverlayControls()'>Toggle overlay controls</div>
-
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleKeyboardControl()'>{{config.keyboard ? "Disable arrow keys" : "Enable arrow keys"}}</div>
-
-        <div class="action-button" fxLayout="column" fxLayoutAlign="center" fxFlex="auto" (click)='toggleMouseWheelControl()'>{{config.mousewheel ? "Disable mouse wheel" : "Enable mouse wheel"}}</div>
-      </div>
-    </div>
-
-    <div class="vertical-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="50%">
-      <div class="box-title">Swiper</div>
-
-      <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
-        <swiper *ngIf="type == 'component' && show" class="swiper-container" fxFlex="auto" [config]="config" [disabled]="disabled" (indexChange)="onIndexChange($event)" (swiperTransitionStart)="onSwiperEvent('transitionStart')" (swiperTransitionEnd)="onSwiperEvent('transitionEnd')">
-          <div *ngFor="let slide of slides" class="swiper-slide">
-            <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
-              {{slide}}
-            </div>
-          </div>
-        </swiper>
-
-        <div *ngIf="type == 'directive' && show" class="swiper-container" [disabled]="disabled" [swiper]="config" (indexChange)="onIndexChange($event)" (swiperTransitionStart)="onSwiperEvent('transitionStart')" (swiperTransitionEnd)="onSwiperEvent('transitionEnd')">
-          <div class="swiper-wrapper">
-            <div *ngFor="let slide of slides" class="swiper-slide">
-              <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
-                {{slide}}
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-scrollbar" [hidden]="config.scrollbar === false"></div>
-          <div class="swiper-pagination" [hidden]="config.pagination === false"></div>
-
-          <div class="swiper-button-prev" [hidden]="config.navigation === false"></div>
-          <div class="swiper-button-next" [hidden]="config.navigation === false"></div>
-        </div>
-      </div>-->
-
-<!--     <ngx-glide>
-  <div><img src="/assets/nature-1.jpg" class="glide-img"></div>
-  <div><img src="/assets/nature-2.jpg" class="glide-img"></div>
-  <div><img src="/assets/nature-3.jpg" class="glide-img"></div>
-</ngx-glide> -->
-
 <div class="container glide-container mt-4">
   <div class="glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
         <li class="glide__slide">
           <div class="d-image">
-            <img src="/assets/nature-1.jpg" class="glide-img" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
+            <img src="/assets/nature-1.jpg" (click)="redirect('managerdetail/events')" class="glide-img" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
           </div>
           <div class="text-num text-center text-uppercase">
             01
@@ -114,7 +15,7 @@
         </li>
         <li class="glide__slide">
           <div class="d-image">
-            <img src="/assets/nature-2.jpg" class="glide-img" (click)="redirect('creatives')" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
+            <img src="/assets/nature-2.jpg" class="glide-img" (click)="redirect('managerdetail/creatives')" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
           </div>
           <div class="text-num text-center text-uppercase ">
             02
@@ -125,7 +26,7 @@
         </li>
         <li class="glide__slide">
           <div class="d-image">
-            <img src="/assets/nature-3.jpg" class="glide-img" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
+            <img src="/assets/nature-3.jpg" (click)="redirect('managerdetail/web')" class="glide-img" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
           </div>
           <div class="text-num text-center text-uppercase">
             03
@@ -136,7 +37,7 @@
         </li>
         <li class="glide__slide">
           <div class="d-image">
-            <img src="/assets/nature-4.jpg" class="glide-img" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
+            <img src="/assets/nature-4.jpg" class="glide-img" (click)="redirect('managerdetail/infrastructure')" (mouseenter)="zoomIn($event)" (mouseleave)="zoomOut($event)">
           </div>
           <div class="text-num text-center text-uppercase">
             04

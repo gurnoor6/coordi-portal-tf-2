@@ -11,7 +11,7 @@ const routes: Routes = [
 {path:'',component:HomeComponent},
 {path:'departments',component:DepartmentsComponent},
 {path:'departmentdetail',component:DepartmentdetailComponent},
-{path:'managerdetail',component:ManagerdetailComponent},
+{path:'managerdetail/:dep',component:ManagerdetailComponent},
 {path:'memories',component:CoordimemoriesComponent}
 ];
 

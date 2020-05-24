@@ -42,6 +42,10 @@ export class DepartmentsComponent implements OnInit {
   	element_num.classList.remove('border-white');
   }
 
+  redirect(link){
+  	window.location.href = link;
+  }
+
 
 
 }
