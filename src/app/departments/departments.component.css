@@ -123,6 +123,8 @@
   width:100%;
   transition: 0.25s ease-in;
   transform: scale(1);
+  height:275px;
+  object-fit: cover;
 }
 
 .glide-img:hover{
