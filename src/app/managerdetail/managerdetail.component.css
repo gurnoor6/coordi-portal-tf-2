@@ -153,6 +153,21 @@
 	height:80px;
 }
 
+#hospitality-head{
+	max-width:100%;
+	margin-left: 10%;
+}
+
+#fnb-head{
+	max-width:75%;
+	margin-left: 25%;
+}
+
+#media-head{
+	max-width:90%;
+	margin-left: 15%;
+	margin-bottom:-5%;
+}
 
 .cross-creatives-mobile{
 	transform: translate3d(100%,50%,0);

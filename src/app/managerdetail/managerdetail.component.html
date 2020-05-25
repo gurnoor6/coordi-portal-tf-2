@@ -242,8 +242,179 @@
 		<div class="col-12 col-md-3 main-manager-col two-people-col">
 			<div class="row">
 				<div class="col-12 manager-col">
-					<img src="assets/managers/rahul-yadav-min.png" class="manager-img">
-					<p class="manager-name text-center">Rahul Yadav</p>
+					<img src="assets/managers/Aman-min.png" class="manager-img">
+					<p class="manager-name text-center">Aman Mishra</p>
+					<p class="manager-num text-center">730 419 8634</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+
+		<!-- person 2 -->
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Ritwik-min.png" class="manager-img">
+					<p class="manager-name text-center">Ritwik Kadu</p>
+					<p class="manager-num text-center">878 872 7737</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- For fnb -->
+<div class="container-fluid" *ngIf="managers=='fnb'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/fnb_head.png" id="fnb-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">Food & Beverages</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Anand-min.png" class="manager-img">
+					<p class="manager-name text-center">S. Anand Natarajan</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- For hospitality -->
+<div class="container-fluid" *ngIf="managers=='hospitality'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/hospitality_head.png" id="hospitality-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">Hospitality</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Prasanna-min.png" class="manager-img">
+					<p class="manager-name text-center">Prasanna Talwane</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- For media and publicity-->
+<div class="container-fluid" *ngIf="managers=='mediaandpublicity'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/media_head.png" id="media-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">Media and Publicity</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<!-- Person 1 -->
+		<div class="col-12 col-md-3 main-manager-col two-people-col">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Shashank-min.png" class="manager-img">
+					<p class="manager-name text-center">Shashank Tomar</p>
 					<p class="manager-num text-center">000090</p>
 				</div>
 			</div>
@@ -260,8 +431,8 @@
 		<div class="col-12 col-md-3 main-manager-col" >
 			<div class="row">
 				<div class="col-12 manager-col">
-					<img src="assets/managers/Shashwat-min.png" class="manager-img">
-					<p class="manager-name text-center">shashwat kumar</p>
+					<img src="assets/managers/Siddharth-min.png" class="manager-img">
+					<p class="manager-name text-center">Siddharth Singh</p>
 					<p class="manager-num text-center">000090</p>
 				</div>
 			</div>
