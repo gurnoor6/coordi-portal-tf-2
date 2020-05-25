@@ -32,6 +32,7 @@ export class DepartmentdetailComponent implements OnInit {
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
   		if(params['dep']=='events' ){
+  			this.events=events;
 	    	this.eventspage=true;
 	    }
 
@@ -62,6 +63,10 @@ export class DepartmentdetailComponent implements OnInit {
 	     if(params['dep']=='web' ){
 	    	this.currentpage= web;
 	    }
+
+	    if(params['dep']!='events')
+	    	this.events = this.currentpage;
+
 	  });
 
   	setInterval(()=>{this.intervalFunction()});
@@ -102,11 +107,11 @@ export class DepartmentdetailComponent implements OnInit {
   	this.trigger = "fade";
   	this.animation_origin = target;
   	if(target=='show'){		//show==showNext
-  		this.current_index = (this.current_index+ 1)%5;
+  		this.current_index = (this.current_index+ 1)%6;
   	}
 
   	if(target=='showPrevious'){		//show==showNext
-  		this.current_index=(5+this.current_index-1)%5;
+  		this.current_index=(5+this.current_index-1)%6;
   	}
 
   	this.activeDotHandler();

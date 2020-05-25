@@ -35,6 +35,7 @@
 			<p class="circle " (click)="showActive($event,2)"></p>
 			<p class="circle " (click)="showActive($event,3)"></p>
 			<p class="circle " (click)="showActive($event,4)"></p>
+			<p class="circle " (click)="showActive($event,5)"></p>
 			<p><img src="assets/down.png" (click)="changeEvent('show')" class="navigatearrows"></p>
 		</div>
 	</div>
@@ -59,7 +60,7 @@
 				<p class="description">
 					{{currentpage.description}}
 				</p>
-				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
+				<div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
 	            <div class="blur">
 	              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
 	            </div>
@@ -90,7 +91,7 @@
 				<p class="description">
 					{{event.description}}
 				</p>
-				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
+				<div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" *ngIf="event.name=='competitions'">
 	            <div class="blur">
 	              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
 	            </div>

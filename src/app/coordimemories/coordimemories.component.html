@@ -1,15 +1,15 @@
 <div class="container">
 	<div class="row mb-5 memory-row" *ngFor="let m of memories_list">
-		<div class="col-12 col-md-3 text-center left-image">
+		<div class="col-12 col-md-4 text-center left-image">
 			<img src="{{m.image}}" class="coordi-image">
 		</div>
-		<div class="col-12 col-md-9 coordi-text">
+		<div class="col-12 col-md-8 coordi-text">
 			<p class="description-text">
 				{{m.description}}
 			</p>
 			<p class="name">{{m.name}}</p> 
 		</div>
-		<div class="col-12 col-md-3 text-center right-image">
+		<div class="col-12 col-md-4 text-center right-image">
 			<img src="{{m.image}}" class="coordi-image">
 		</div>
 	</div>

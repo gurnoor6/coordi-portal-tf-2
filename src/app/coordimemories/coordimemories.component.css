@@ -1,5 +1,5 @@
 .coordi-image{
-	width:90%;
+	width:100%;
 	object-fit: cover;
 	max-height:250px;
 	object-position: top;
@@ -12,7 +12,7 @@
 
 .description-text{
 	color:#fff;
-	font-size: 22px;
+	font-size: 16px;
 }
 
 .name{
