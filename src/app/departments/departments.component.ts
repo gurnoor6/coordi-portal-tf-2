@@ -9,6 +9,7 @@ import {ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
+ 	mobile=false;
   constructor(private route: ActivatedRoute,private router: Router) { }
   ngOnInit(): void {
   	const config = {
@@ -22,6 +23,8 @@ export class DepartmentsComponent implements OnInit {
 
   	}
   	    new Glide('.glide',config).mount();
+
+  	setInterval(()=>this.intervalFunction());
 
   }
 
@@ -44,6 +47,13 @@ export class DepartmentsComponent implements OnInit {
 
   redirect(link){
   	 this.router.navigate([link]);
+  }
+
+  intervalFunction(){
+  	if(window.innerWidth<675)
+  		this.mobile=true;
+  	else
+  		this.mobile=false;
   }
 
 

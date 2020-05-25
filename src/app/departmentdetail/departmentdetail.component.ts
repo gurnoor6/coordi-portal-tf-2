@@ -63,6 +63,8 @@ export class DepartmentdetailComponent implements OnInit {
   }
 
   showOtherImage(){
+  	if(this.mobile)
+  		return;
   	this.multiple?this.multiple=false:this.multiple=true;
   }
 

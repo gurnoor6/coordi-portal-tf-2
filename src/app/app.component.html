@@ -1,9 +1,9 @@
-<ngx-ui-loader fgsType="rectangle-bounce-pulse-out" fgsColor="red"></ngx-ui-loader>
+<ngx-ui-loader fgsType="rectangle-bounce-pulse-out" fgsColor="#0a193b" pbColor="#0a193b"></ngx-ui-loader>
 <body>
 <div class="main-container">
 <nav @navAnimation class="navbar navbar-expand-lg bg-dark navbar-dark transparent-nav">
   <!-- Brand -->
-  <a class="navbar-brand" href="/"><img src="assets/logo.png" class="logo"></a>
+  <a class="navbar-brand" href="http://techfest.org/"><img src="assets/logo.png" class="logo"></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -30,8 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" (click)="redirect('memories')" id="memories">COORDIE MEMORIES</a>
         </li>
-        <li class="nav-item">
-          <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
+        <li class="nav-item" [class.d-none]="mobile">
+          <div class="blur-div" (click)="redirectAnotherPage('https://docs.google.com/forms/d/e/1FAIpQLScfj7PY-xHs5qVLuMoQ1useoIYowsRx9mUvorze02WrBm06xQ/viewform?usp=sf_link
+')" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
             <div class="blur">
               <a class="nav-link" href="#" id="register" style="min-height:100%;width:100%;position:absolute"></a>
             </div>
@@ -40,6 +41,10 @@
             </div>
           </div>
 
+        </li>
+        <li class="nav-item" [class.d-none]="!mobile">
+          <a class="nav-link" (click)="redirectAnotherPage('https://docs.google.com/forms/d/e/1FAIpQLScfj7PY-xHs5qVLuMoQ1useoIYowsRx9mUvorze02WrBm06xQ/viewform?usp=sf_link
+')" id="memories">REGISTER</a>
         </li>
       </ul>
     </div>
@@ -54,18 +59,22 @@
   </div>
 
    
-    <div @footerAnimation class="footer row" >
+    <div @footerAnimation class="footer row" *ngIf="footer">
       <div class="col-12 col-lg-6" *ngIf="smallWidth">
-         <p class="footer-text text-center"><span class=" underline-footer d-inline-block" style="overflow-x: hidden">RESULT OF REVERSE VIDEO CHALLENGE</span></p>
+         <p class="footer-text text-center" (click)="redirect('results')"><span class=" underline-footer d-inline-block" style="overflow-x: hidden">RESULTS OF REVERSE VIDEO CHALLENGE</span></p>
       </div>
       <div class="col-12 col-lg-6 text-center text-lg-left">
-          <span class="fa fa-twitter"></span>
-           <span class="fa fa-linkedin"></span>
-          <span class="fa fa-facebook"></span>
-          <span class="fa fa-instagram"></span>
+          <span (click)="redirectAnotherPage('https://twitter.com/Techfest_IITB
+          ')" class="fa fa-twitter"></span>
+           <span (click)="redirectAnotherPage('https://www.linkedin.com/company/techfest/
+')" class="fa fa-linkedin"></span>
+          <span (click)="redirectAnotherPage('https://www.facebook.com/iitbombaytechfest
+')" class="fa fa-facebook"></span>
+          <span (click)="redirectAnotherPage('https://www.instagram.com/techfest_iitbombay/
+')" class="fa fa-instagram"></span>
       </div>
       <div class="col-12 col-lg-6 results-div" *ngIf="!smallWidth">
-        <p class="footer-text text-lg-right text-center" (click)="redirect('results')"><span class=" underline-footer d-inline-block" style="overflow-x: hidden;font-weight:bolder">RESULT OF REVERSE VIDEO CHALLENGE</span></p>
+        <p class="footer-text text-lg-right text-center" (click)="redirect('results')"><span class=" underline-footer d-inline-block" style="overflow-x: hidden;font-weight:bolder">RESULTS OF REVERSE VIDEO CHALLENGE</span></p>
       </div>
     </div>
 

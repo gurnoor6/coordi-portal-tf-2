@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   smallWidth=false;
   stateRegister='show';
   footer=true;
+  mobile=false;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
@@ -36,8 +37,10 @@ export class AppComponent implements OnInit {
 
   changeOrder(){	
   	(window.innerWidth<992)?this.smallWidth=true:this.smallWidth=false;
-    if(window.location.href.includes('managerdetail') || window.location.href.includes('memories') )
+    if(window.location.href.includes('managerdetail') )
       this.footer=false;
+    else
+      this.footer=true;
 
     if(window.location.href.includes('memories')){
       let navlinks = document.querySelectorAll('.nav-link');
@@ -54,6 +57,11 @@ export class AppComponent implements OnInit {
       });
       document.querySelector('#departments').classList.add('active');
     }
+
+    if(window.innerWidth<675)
+      this.mobile=true;
+    else
+      this.mobile=false;
 
   }
 
@@ -83,5 +91,9 @@ export class AppComponent implements OnInit {
 
   redirect(path){
     this.router.navigate([path]);
+  }
+
+  redirectAnotherPage(link){
+    window.location.href=link;
   }
 }

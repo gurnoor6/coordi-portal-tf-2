@@ -20,8 +20,7 @@
 			</div>
 			 <div class="row mt-4" style="padding-bottom:32px;">
 				  <div class="col-12 text-center icons">
-			          <span class="fa fa-twitter"></span>
-			          <span class="fa fa-linkedin"></span>
+			          <span class="fa fa-whatsapp"></span>
 			          <span class="fa fa-facebook"></span>
 			          <span class="fa fa-instagram"></span>
 			      </div>
@@ -32,7 +31,7 @@
 </div>
 
 <div class="container-fluid" *ngIf="managers=='events'">
-	<div class="row text-center head-row">
+	<div class="row text-center head-row" *ngIf="!mobile">
 		<div class="col-10">
 			<p class="text-left text-md-center"> <img src="assets/events_head.png" class="image-head"></p>
 		</div>
@@ -41,26 +40,45 @@
 		</div>
 	</div>
 
+	<!-- <div class="row text-center head-row">
+		<div class="col-10">
+			<p class="demo-txt d-inline-block" style="border-bottom: none;transform:translateY(4px)">EVENTS MANAGERS</p>
+		</div>
+		<div class="col-2">
+			<p><img class="cross" id="events-cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+		</div>
+	</div> -->
+
+	<div class="row head-row" *ngIf="mobile">
+		<div class="col-10">
+		  	<p class="events-head text-center">EVENTS</p>
+		</div>
+		<div class="col-2">
+			<p class="text-right"><img class="cross" id="events-cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+		</div>
+	</div>
+
+	
+
 	<div class="row justify-content-around">
-		<div class="col-12 col-md-3">
+		<div class="col-12 col-md-3" *ngFor="let manager of events_managers">
 			<div class="row">
 				<div class="col-12 manager-col">
-					<img src="assets/shanbhag.png" class="manager-img">
-					<p class="manager-name text-center">Krishnakant Suryavanshi</p>
-					<p class="manager-num text-center">9090909090</p>
+					<img src="assets/managers/{{manager.image}}" class="manager-img">
+					<p class="manager-name text-center">{{manager.name}}</p>
+					<p class="manager-num text-center">{{manager.number}}</p>
 				</div>
 			</div>
 			 <div class="row mt-4" style="padding-bottom:32px;">
 				  <div class="col-12 text-center icons">
-			          <span class="fa fa-twitter"></span>
-			          <span class="fa fa-linkedin"></span>
+			          <span class="fa fa-whatsapp"></span>
 			          <span class="fa fa-facebook"></span>
 			          <span class="fa fa-instagram"></span>
 			      </div>
 			  </div>
 		</div>
 
-		<div class="col-12 col-md-3">
+		<!-- <div class="col-12 col-md-3">
 			<div class="row">
 				<div class="col-12 manager-col">
 					<img src="assets/shanbhag.png" class="manager-img">
@@ -94,7 +112,7 @@
 			          <span class="fa fa-instagram"></span>
 			      </div>
 			  </div>
-		</div>
+		</div> -->
 
 
 	</div>
