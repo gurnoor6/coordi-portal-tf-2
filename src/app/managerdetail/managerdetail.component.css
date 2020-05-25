@@ -65,14 +65,14 @@
 }
 
 .fa{
-	font-size: 32px;
+	font-size: 28px;
 	color:#ffffff;
 	border:1px solid #ffffff;
 	border-radius: 100%; 
-	height:56px; 
-	width:56px; 
+	height:48px; 
+	width:48px; 
 	text-align: center;
-	padding-top:10px;
+	padding-top:8px;
 	margin-right:16px;
 	opacity:0.5;
 	transition:opacity 0.25s ease-in;
@@ -84,6 +84,7 @@
 
 /*****Image headings*******/
 .image-head{
+	margin-left:20%;
 	margin-bottom: -16px;
 }
 
