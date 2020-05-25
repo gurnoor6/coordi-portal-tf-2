@@ -14,7 +14,7 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxGlideModule } from 'ngx-glide';
 import { ResultsComponent } from './results/results.component';
-
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -37,7 +37,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserAnimationsModule,
     NgxUsefulSwiperModule,
     SwiperModule,
-    NgxGlideModule
+    NgxGlideModule,
+    NgxUiLoaderModule
   ],
   providers: [
     {

@@ -2,7 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import {CurrentscreenService} from './currentscreen.service';
 import {translateRight,navAnimation,footerAnimation,routeAnimate} from './app-animations';
 import { RouterOutlet,ActivatedRoute, Router } from '@angular/router';
-
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +22,14 @@ export class AppComponent implements OnInit {
   footer=true;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
-              private router:Router){}
+              private router:Router,
+              private ngxService: NgxUiLoaderService){}
   ngOnInit(){
+    this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId
+    // Stop the foreground loading after 5s
+    setTimeout(() => {
+      this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
+    }, 1000);
   	setInterval(()=>{this.changeOrder()});
   }
 
