@@ -1,9 +1,6 @@
 /****experiments****/
-.demo-txt{
-	color:#fff;
-	font-weight:bold;
-	font-size:22px;
-	border-bottom: 2px solid #fff;
+.main-manager-col{
+	margin-right: 1px;
 }
 
 .events-head{
@@ -13,6 +10,7 @@
 	transform:translateX(12%);
 	font-weight:bold;
 }
+
 
 
 .head-text{
@@ -67,14 +65,14 @@
 }
 
 .fa{
-	font-size: 24px;
+	font-size: 32px;
 	color:#ffffff;
 	border:1px solid #ffffff;
 	border-radius: 100%; 
-	height:40px; 
-	width:40px; 
+	height:56px; 
+	width:56px; 
 	text-align: center;
-	padding-top:6px;
+	padding-top:10px;
 	margin-right:16px;
 	opacity:0.5;
 	transition:opacity 0.25s ease-in;
@@ -116,7 +114,12 @@
 	}
 
 	.fa{
+		font-size:24px;
 		opacity:1;
+		height:40px; 
+		width:40px; 
+		padding-top:6px;
+		margin-right:16px;
 	}
 
 }

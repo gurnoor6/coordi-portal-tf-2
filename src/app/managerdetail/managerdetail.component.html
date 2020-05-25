@@ -40,14 +40,6 @@
 		</div>
 	</div>
 
-	<!-- <div class="row text-center head-row">
-		<div class="col-10">
-			<p class="demo-txt d-inline-block" style="border-bottom: none;transform:translateY(4px)">EVENTS MANAGERS</p>
-		</div>
-		<div class="col-2">
-			<p><img class="cross" id="events-cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
-		</div>
-	</div> -->
 
 	<div class="row head-row" *ngIf="mobile">
 		<div class="col-10">
@@ -61,7 +53,7 @@
 	
 
 	<div class="row justify-content-around">
-		<div class="col-12 col-md-3" *ngFor="let manager of events_managers">
+		<div class="col-12 col-md-3 main-manager-col" *ngFor="let manager of events_managers">
 			<div class="row">
 				<div class="col-12 manager-col">
 					<img src="assets/managers/{{manager.image}}" class="manager-img">
