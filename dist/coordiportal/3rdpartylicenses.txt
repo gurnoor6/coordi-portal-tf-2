@@ -163,6 +163,9 @@ SOFTWARE.
 ngx-swiper-wrapper
 MIT
 
+ngx-ui-loader
+MIT
+
 ngx-useful-swiper
 MIT
 The MIT License (MIT)
