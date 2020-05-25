@@ -144,3 +144,22 @@
 #creatives-head{
 	margin-left:10%;
 }
+
+#infra-head{
+	margin-left:-1%;
+}
+
+#infra-head{
+	height:80px;
+}
+
+
+.cross-creatives-mobile{
+	transform: translate3d(100%,50%,0);
+}
+
+@media screen and (min-width:675px){
+	.two-people-col{
+		margin-right: 72px;
+	}
+}

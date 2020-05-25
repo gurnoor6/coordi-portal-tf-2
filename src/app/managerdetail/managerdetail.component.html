@@ -1,34 +1,38 @@
 
 <!-- For creatives -->
-<div class="container" *ngIf="managers=='creatives'">
-	<div class="container container-head">
-		<div class="row text-center head-row" *ngIf="!mobile">
-			<div class="col-10" >
-				<p class="text-left text-md-center"> <img src="assets/creatives_head.png" id="creatives-head" class="image-head"></p>
+<div class="container-fluid" *ngIf="managers=='creatives'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/creatives_head.png" id="creatives-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
 			</div>
-			<div class="col-2" >
-				<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">creatives</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
 			</div>
 		</div>
-	</div>
-
-	<div class="row head-row" *ngIf="mobile">
-		<div class="col-10">
-		  	<p class="events-head text-center">CREATIVES</p>
-		</div>
-		<div class="col-2">
-			<p class="text-right"><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
-		</div>
-	</div>
 
 
+	<!-- Bio part -->
 	<div class="row justify-content-center">
-		<div class="col-12 col-md-4">
+		<div class="col-12 col-md-3 main-manager-col" >
 			<div class="row">
 				<div class="col-12 manager-col">
-					<img src="assets/shanbhag.png" class="manager-img">
-					<p class="manager-name mt-2 text-uppercase text-center">rahul shanbag</p>
-					<p class="manager-num text-center">9090909090</p>
+					<img src="assets/managers/Ravi-min.png" class="manager-img">
+					<p class="manager-name text-center">Ravi Jangir</p>
+					<p class="manager-num text-center">000090</p>
 				</div>
 			</div>
 			 <div class="row mt-4" style="padding-bottom:32px;">
@@ -40,7 +44,6 @@
 			  </div>
 		</div>
 	</div>
-
 </div>
 
 
@@ -76,6 +79,190 @@
 					<img src="assets/managers/{{manager.image}}" class="manager-img">
 					<p class="manager-name text-center">{{manager.name}}</p>
 					<p class="manager-num text-center">{{manager.number}}</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- For web -->
+<div class="container-fluid" *ngIf="managers=='web'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/web_head.png" id="creatives-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">{{managers}}</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Vivek-min.png" class="manager-img">
+					<p class="manager-name text-center">Vivek Saurabh Verma</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- For infrastructure -->
+<div class="container-fluid" *ngIf="managers=='infrastructure'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/infra_head.png" id="infra-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">{{managers}}</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<!-- Person 1 -->
+		<div class="col-12 col-md-3 main-manager-col two-people-col">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/rahul-yadav-min.png" class="manager-img">
+					<p class="manager-name text-center">Rahul Yadav</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+
+		<!-- person 2 -->
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Shashwat-min.png" class="manager-img">
+					<p class="manager-name text-center">shashwat kumar</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+	</div>
+</div>
+
+<!-- For marketing -->
+<div class="container-fluid" *ngIf="managers=='marketing'">
+	<!-- Heading part -->
+		<!-- For desktop -->
+		<div class="container container-head">
+			<div class="row text-center head-row" *ngIf="!mobile">
+				<div class="col-10" >
+					<p class="text-left text-md-center"> <img src="assets/infra_head.png" id="infra-head" class="image-head"></p>
+				</div>
+				<div class="col-2" >
+					<p><img class="cross" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- for mobile -->
+		<div class="row head-row" *ngIf="mobile">
+			<div class="col-10">
+			  	<p class="events-head text-center text-uppercase">{{managers}}</p>
+			</div>
+			<div class="col-2">
+				<p class="text-right"><img class="cross cross-creatives-mobile" (click)="redirectTo('departments')" src="/assets/cross.png"></p>
+			</div>
+		</div>
+
+
+	<!-- Bio part -->
+	<div class="row justify-content-center">
+		<!-- Person 1 -->
+		<div class="col-12 col-md-3 main-manager-col two-people-col">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/rahul-yadav-min.png" class="manager-img">
+					<p class="manager-name text-center">Rahul Yadav</p>
+					<p class="manager-num text-center">000090</p>
+				</div>
+			</div>
+			 <div class="row mt-4" style="padding-bottom:32px;">
+				  <div class="col-12 text-center icons">
+			          <span class="fa fa-whatsapp"></span>
+			          <span class="fa fa-facebook"></span>
+			          <span class="fa fa-instagram"></span>
+			      </div>
+			  </div>
+		</div>
+
+		<!-- person 2 -->
+		<div class="col-12 col-md-3 main-manager-col" >
+			<div class="row">
+				<div class="col-12 manager-col">
+					<img src="assets/managers/Shashwat-min.png" class="manager-img">
+					<p class="manager-name text-center">shashwat kumar</p>
+					<p class="manager-num text-center">000090</p>
 				</div>
 			</div>
 			 <div class="row mt-4" style="padding-bottom:32px;">
