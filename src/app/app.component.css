@@ -289,4 +289,27 @@ body{
 	body{
 		overflow:hidden;
 	}
+
+	.navbar-toggler{
+		background-color: #fff;
+		height:50px;
+		width:50px;
+		border-radius: 50%;
+	}
+
+	.line-1{
+		display: block;
+		border:1px solid black;
+		width:15px;
+		margin-top:5px;
+		transform: translate3d(4px,-24px,0);
+	}
+
+	.line-m{
+		display: block;
+		border:1px solid black;
+		width:10px;
+		margin-top:5px;
+		transform: translate3d(8px,-24px,0);
+	}
 }

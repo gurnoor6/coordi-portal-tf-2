@@ -17,7 +17,7 @@
 				<p class="description">
 					{{current_event.description}}
 				</p>
-				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right"  >
+				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/events')"  >
 	            <div class="blur">
 	              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
 	            </div>

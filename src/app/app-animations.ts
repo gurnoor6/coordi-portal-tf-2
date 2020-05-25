@@ -59,6 +59,15 @@ export const routeAnimate=(
 
 		]))),
 
+		transition('departmentdetail=>department',animate('0.5s ease-in',keyframes([
+			style({opacity:"0", transform: "translateY(-600px) scale(0)", offset:0.0}),
+			style({opacity:"0.3", transform: "translateY(-400px) scale(0.1)", offset:0.2}),
+			style({opacity:"0.5", transform: "translateY(-300px) scale(0.1)",offset:0.35}),
+			style({opacity:"0.5",transform: "translateY(-200px) scale(0.5)",offset:0.8}),
+			style({opacity:"1",transform: "translateY(0px) scale(1)",offset:1.0}),
+
+		]))),
+
 		transition('*<=>*',animate('0.5s ease-in',keyframes([
 			style({opacity:"0",offset:0.0}),
 			style({opacity:"0.3",offset:0.2}),
