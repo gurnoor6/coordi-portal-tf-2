@@ -234,7 +234,7 @@ body{
 		width:42px; 
 		text-align: center;
 		padding-top:7.5px;
-		margin-right:18px;
+		margin-right:14px;
 		opacity:0.5;
 	}
 
@@ -320,6 +320,8 @@ body{
 	.footer-text{
 		font-size: 18px;
 	}
+
+
 }
 
 
