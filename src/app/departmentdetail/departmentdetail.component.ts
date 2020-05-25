@@ -141,8 +141,13 @@ export class DepartmentdetailComponent implements OnInit {
   }
 
   redirectTo(path){
-  	console.log(path);
-  	 this.router.navigate([path]);
+  	if(path.includes('managerdetail'))
+	   if(!window.location.href.includes('events'))
+	   		this.router.navigate([path+this.currentpage.managerlink]);
+	   else
+	   		this.router.navigate([path+'events']);
+	else
+		this.router.navigate([path]);
   }
 
   intervalFunction(){
