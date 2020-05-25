@@ -31,6 +31,10 @@ export class DepartmentdetailComponent implements OnInit {
 
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
+  		if(params['dep']=='events' ){
+	    	this.eventspage=true;
+	    }
+
   		if(params['dep']=='creatives' ){
 	    	this.currentpage = creatives;
 	    }
