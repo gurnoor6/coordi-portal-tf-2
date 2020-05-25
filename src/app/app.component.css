@@ -288,7 +288,10 @@ body{
 	}
 
 	body{
+		background: url("/assets/backg_mobile.jpg");
 		overflow:hidden;
+		 background-size: contain;
+		 background-position: bottom;
 	}
 
 	.navbar-toggler{
