@@ -28,7 +28,7 @@ export class DepartmentdetailComponent implements OnInit {
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
 	    console.log(params['dep']);
-	    if(params['dep']=='creatives'){
+	    if(params['dep']=='creatives' || params['dep']=='web'  || params['dep']=='infrastructure' ){
 	    	this.creatives=true;
 	    	this.events = creatives;
 	    }
