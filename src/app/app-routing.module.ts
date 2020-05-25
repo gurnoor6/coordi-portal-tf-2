@@ -11,7 +11,7 @@ import {ResultsComponent} from './results/results.component';
 const routes: Routes = [
 {path:'',component:HomeComponent,data:{animation:'home'}},
 {path:'departments',component:DepartmentsComponent,data:{animation:'department'}},
-{path:'departmentdetail',component:DepartmentdetailComponent},
+{path:'departmentdetail',component:DepartmentdetailComponent,data:{animation:'departmentdetail'}},
 {path:'departmentdetail/:dep',component:DepartmentdetailComponent},
 {path:'managerdetail/:dep',component:ManagerdetailComponent,data:{animation:'managerdetail'}},
 {path:'memories',component:CoordimemoriesComponent},
