@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {events,creatives} from './events';
+import {events,creatives,web,fnb,hospitality,marketing,infrastructure,mediaandpublicity} from './events';
 import {translateRight,navAnimation,footerAnimation} from '../app-animations';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {fade} from './department-animations';
@@ -22,15 +22,41 @@ export class DepartmentdetailComponent implements OnInit {
   multiple=false;
   animation_origin;
   mobile=false;
-  creatives=false;
+  eventspage=false;
+
+  currentpage;
+
+
   constructor(private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
   	this.route.params.subscribe(params => {
-	    console.log(params['dep']);
-	    if(params['dep']=='creatives' || params['dep']=='web'  || params['dep']=='infrastructure' ){
-	    	this.creatives=true;
-	    	this.events = creatives;
+  		if(params['dep']=='creatives' ){
+	    	this.currentpage = creatives;
+	    }
+
+	    if(params['dep']=='marketing' ){
+	    	this.currentpage = marketing;
+	    }
+
+	    if(params['dep']=='hospitality' ){
+	    	this.currentpage=hospitality;
+	    }
+
+	    if(params['dep']=='fnb' ){
+	    	this.currentpage = fnb;
+	    }
+
+	    if(params['dep']=='infrastructure' ){
+	    	this.currentpage= infrastructure;
+	    }
+
+	    if(params['dep']=='mediaandpublicity' ){
+	    	this.currentpage= mediaandpublicity;
+	    }
+
+	     if(params['dep']=='web' ){
+	    	this.currentpage= web;
 	    }
 	  });
 

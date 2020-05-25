@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="!creatives">
+<div class="container-fluid" *ngIf="eventspage">
 	<div class="row"  *ngIf="!mobile">
 		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
 			<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
@@ -8,7 +8,7 @@
 			<div class="text">
 				<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
 					<div class="col-10">
-						<p class="head text-uppercase" style="margin-bottom:0">{{current_event.name}}</p>
+						<p class="head text-uppercase" style="margin-bottom:0">{{currentpage.name}}</p>
 					</div>
 					<div class="col-2 text-right">
 					 	<p><img class="cross" src="/assets/cross.png" (click)="redirectTo('departments')"></p>
@@ -40,7 +40,7 @@
 	</div>
 </div>
 
-<div class="container-fluid" *ngIf="creatives">
+<div class="container-fluid" *ngIf="!eventspage">
 	<div class="row justify-content-center"  *ngIf="!mobile">
 		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
 			<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
@@ -50,14 +50,14 @@
 			<div class="text">
 				<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
 					<div class="col-10">
-						<p class="head text-uppercase" style="margin-bottom:0">Creatives</p>
+						<p class="head text-uppercase" style="margin-bottom:0">{{currentpage.name}}</p>
 					</div>
 					<div class="col-2 text-right">
 					 	<p><img class="cross" src="/assets/cross.png" (click)="redirectTo('departments')"></p>
 					 </div>
 				</div>
 				<p class="description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+					{{currentpage.description}}
 				</p>
 				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
 	            <div class="blur">
@@ -74,32 +74,32 @@
 </div>
 
 
-	<div class="mobile" *ngIf="mobile">
-		<div class="row mb-5" *ngFor="let event of events">
-			<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
-				<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
-				<img src="assets/multiple_photos.png" (mouseleave) = "showOtherImage()" [class.d-none]="!multiple" style="width:100%; object-fit: cover;margin-top: 0%" class="multiple-pics">
-			</div>
-			<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-7">
-				<div class="text">
-					<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
-						<div class="col-12 text-center">
-							<p class="head text-uppercase" style="margin-bottom:0">{{event.name}}</p>
-						</div>
+<div class="mobile" *ngIf="mobile">
+	<div class="row mb-5" *ngFor="let event of events">
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
+			<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
+			<img src="assets/multiple_photos.png" (mouseleave) = "showOtherImage()" [class.d-none]="!multiple" style="width:100%; object-fit: cover;margin-top: 0%" class="multiple-pics">
+		</div>
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-7">
+			<div class="text">
+				<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
+					<div class="col-12 text-center">
+						<p class="head text-uppercase" style="margin-bottom:0">{{event.name}}</p>
 					</div>
-					<p class="description">
-						{{event.description}}
-					</p>
-					 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
-		            <div class="blur">
-		              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
-		            </div>
-		            <div [@tR]="stateRegister" class="blur-text">
-		              <a  class="text-uppercase text-white button-text" (@tR.done)="log($event)">Your manager peeps</a>
-		            </div>
-		          </div>
-
 				</div>
+				<p class="description">
+					{{event.description}}
+				</p>
+				 <div class="blur-div" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" style="text-align: right" (click)="redirectTo('managerdetail/creatives')" >
+	            <div class="blur">
+	              <a class="nav-link"  id="register" style="min-height:100%;width:100%;position:absolute"></a>
+	            </div>
+	            <div [@tR]="stateRegister" class="blur-text">
+	              <a  class="text-uppercase text-white button-text" (@tR.done)="log($event)">Your manager peeps</a>
+	            </div>
+	          </div>
+
 			</div>
 		</div>
 	</div>
+</div>
