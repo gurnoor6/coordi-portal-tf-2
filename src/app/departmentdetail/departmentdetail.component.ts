@@ -65,7 +65,7 @@ export class DepartmentdetailComponent implements OnInit {
 	    }
 
 	    if(params['dep']!='events')
-	    	this.events = this.currentpage;
+	    	this.events = [this.currentpage];
 
 	  });
 
