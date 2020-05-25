@@ -34,7 +34,7 @@
 }
 
 .cross:hover{
-	transform: rotate(90deg);
+	transform: translate3d(225%,10%,0) rotate(90deg);
 	transition: 0.5s;
 }
 
@@ -84,11 +84,12 @@
 
 /*****Image headings*******/
 .image-head{
-	margin-left:20%;
+	margin-left:15%;
 	margin-bottom: -16px;
 }
 
 #events-cross{
+	transform: translate3d(60%,30%,0);
 	margin-top:12.5%;
 }
 
@@ -132,4 +133,14 @@
 	transition:0.25s ease-in;
 }
 
+.container-head{
+	max-width: 70vw;
+}
 
+.cross{
+	transform: translate3d(225%,10%,0);
+}
+
+#creatives-head{
+	margin-left:10%;
+}
