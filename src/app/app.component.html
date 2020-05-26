@@ -36,7 +36,7 @@
           <div class="blur-div" (click)="redirectAnotherPage('https://docs.google.com/forms/d/e/1FAIpQLScfj7PY-xHs5qVLuMoQ1useoIYowsRx9mUvorze02WrBm06xQ/viewform?usp=sf_link
 ')" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
             <div class="blur">
-              <a class="nav-link" href="#" id="register" style="min-height:100%;width:100%;position:absolute"></a>
+              <a class="nav-link" id="register" style="min-height:100%;width:100%;position:absolute"></a>
             </div>
             <div [@tR]="stateRegister" class="blur-text">
               <a  class="nav-link" (@tR.done)="log($event)">REGISTER</a>
