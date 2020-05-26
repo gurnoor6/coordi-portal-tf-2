@@ -73,4 +73,9 @@
 	.coordi-text{
 		text-align: center;
 	}
+
+	.coordi-text{
+		margin-top:20px;
+		padding-top: 12px;
+	}
 }
