@@ -299,6 +299,7 @@ body{
 		height:50px;
 		width:50px;
 		border-radius: 50%;
+		position: relative;
 	}
 
 	.line-1{
@@ -319,6 +320,26 @@ body{
 
 	.footer-text{
 		font-size: 18px;
+	}
+
+	.sl-1{
+		display: block;
+		border:1px solid black;
+		width:50%;
+		position:absolute;
+		margin:0 !important;
+		bottom:50%;
+		transform: rotate(45deg);
+	}
+
+	.sl-2{
+		display: block;
+		border:1px solid black;
+		width:50%;
+		position:absolute;
+		margin:0 !important;
+		bottom:50%;
+		transform: rotate(-45deg);
 	}
 
 

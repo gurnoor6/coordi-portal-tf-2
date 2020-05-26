@@ -6,11 +6,13 @@
   <a class="navbar-brand" href="http://techfest.org/"><img src="assets/logo.png" class="logo"></a>
 
   <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button (click)="showCross()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
-    <span class="line-1"></span>
-    <span class="line-1 line-m"></span>
-    <span class="line-1"></span>
+    <span class="line-1" [class.d-none]="showx"></span>
+    <span class="line-1 line-m" [class.d-none]="showx"></span>
+    <span class="line-1" [class.d-none]="showx"></span>
+    <span class="sl-1" [class.d-none]="!showx"></span>
+    <span class="sl-2" [class.d-none]="!showx"></span>
   </button>
 
   <!-- Navbar links -->

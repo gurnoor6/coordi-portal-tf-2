@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   footer=true;
   mobile=false;
   overflowHidden=true;
+  showx = false;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
@@ -109,5 +110,9 @@ export class AppComponent implements OnInit {
 
   routeAnimationComplete(e){
     this.commService.statusReceiver(e);
+  }
+
+  showCross(){
+    this.showx?this.showx=false:this.showx=true;
   }
 }
