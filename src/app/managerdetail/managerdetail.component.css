@@ -131,6 +131,7 @@
 .fa:hover{
 	opacity:1;
 	transition:0.25s ease-in;
+  cursor: pointer;
 }
 
 .container-head{

@@ -14,7 +14,7 @@ export const events_managers:Managers[]=[
 {name:'Nisarg Toliya',number:"992 023 1926", fb:'https://www.facebook.com/sunil.narine123', insta:'https://www.instagram.com/awesome_nisarg/',image:'Nisarg-min.png'},
 {name:'Nitesh Kumar',number:"637 784 7750", fb:'https://www.facebook.com/profile.php?id=100008669533650', insta:'https://www.instagram.com/nitesh._saran/',image:'NItesh-min.png'},
 {name:'Rahul Shanbhag',number:"916 709 6849", fb:'https://www.facebook.com/rahul.shanbhag.31', insta:'https://www.instagram.com/rahul_shanbhag/',image:'rahul-Shanbhag-min.png'},
-{name:'Rohit Dinesh Karandikar',number:"976 988 9950", fb:'https://www.facebook.com/rohit.karandikar.7/', insta:'https://www.instagram.com/rohitkarandikar/',image:'Rohit.png'},
+{name:'Rohit Karandikar',number:"976 988 9950", fb:'https://www.facebook.com/rohit.karandikar.7/', insta:'https://www.instagram.com/rohitkarandikar/',image:'Rohit.png'},
 {name:'Shubham Anand',number:"620 444 7516", fb:'https://www.facebook.com/toshubhamanand', insta:'https://www.instagram.com/shubham.anand22/',image:'Shubham A-min.png'},
 {name:'Shubham Gautam',number:"637 696 0986", fb:'https://www.facebook.com/profile.php?id=100023492582460', insta:'https://www.instagram.com/shubhu_087/',image:'Shubham G-min.png'},
 {name:'Tushar Jindal',number:"916 656 5064", fb:'https://www.facebook.com/tushar.jindal.940', insta:'https://www.instagram.com/tushar.jindal.940/?hl=en',image:'Tushar-min.png'},
