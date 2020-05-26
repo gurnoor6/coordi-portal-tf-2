@@ -125,6 +125,7 @@
   transform: scale(1);
   height:275px;
   object-fit: cover;
+  object-position: top;
 }
 
 .glide-img:hover{
