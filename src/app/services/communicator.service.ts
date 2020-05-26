@@ -8,7 +8,6 @@ export class CommunicatorService {
   constructor() { }
 
   statusReceiver(e){
-  	console.log(e['toState']);
   	if(e['toState']=='memories')
   		this.status=true;
   }

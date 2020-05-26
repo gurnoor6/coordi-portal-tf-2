@@ -30,7 +30,6 @@ export class DepartmentsComponent implements OnInit {
 
 
   zoomIn(event){
-  	console.log(event);
   	let element_description = event['path'][2].children[2];
   	let element_num = event['path'][2].children[1];
   	element_description.classList.add('text-name-hover');

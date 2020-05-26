@@ -77,7 +77,6 @@ export class AppComponent implements OnInit {
   }
 
   changeScreen(event,name){
-  	console.log(name);
   	this.cs.setCurrentScreen(name);
     this.router.navigate([''])
     let navlinks = document.querySelectorAll('.nav-link');
