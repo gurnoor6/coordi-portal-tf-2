@@ -23,6 +23,8 @@ export class ManagerdetailComponent implements OnInit {
   }
 
    redirectTo(name){
+   	if(name.includes('http'))
+   		window.location.href=name;
   	this.router.navigate([name]);
   }
 
