@@ -15,6 +15,7 @@ export class DepartmentsComponent implements OnInit {
   	const config = {
   		perView:3,
   		gap:64,
+  		bound: true,
   		breakpoints:{
   			675: {
 		    perView: 1

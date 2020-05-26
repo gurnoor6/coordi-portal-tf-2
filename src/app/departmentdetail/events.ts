@@ -18,7 +18,7 @@ export const events:Event[]=[
 ]
 
 export const creatives:Event=
-{managerlink:'creatives',image:'creatives-1-min copy.png',image2:'creatives-multiple.png',name:'creatives',description:'Design is so simple that\'s why it is so complicated. Shocked? Design is the method of putting form and content together. Design can be art. Design can be aesthetics. Want to get the thrill of seeing your designs on amazing artworks, too good to be true website interfaces, and mindblowing hoodies? Join the CREATIVES team to learn to do all of this and soo much more. No prior knowledge needed. Come be a part of the evergrowing Techfest family!'}
+{managerlink:'creatives',image:'creatives-1-min copy.png',image2:'creatives-2-min copy.png',name:'creatives',description:'Design is so simple that\'s why it is so complicated. Shocked? Design is the method of putting form and content together. Design can be art. Design can be aesthetics. Want to get the thrill of seeing your designs on amazing artworks, too good to be true website interfaces, and mindblowing hoodies? Join the CREATIVES team to learn to do all of this and soo much more. No prior knowledge needed. Come be a part of the evergrowing Techfest family!'}
 
 export const web:Event=
 {managerlink:'web',image:'web-1-min.png',image2:'web-2-min.png',name:'web',description:'Ever wondered what connects Techfest to the whole world? You guessed it right. The Web Department! We strive to create visually appealing websites and applications that convey the core idea behind the fest to everyone out there. As a Web Coordinator you\'ll work on the main website of Techfest and the Techfest App, collaborating with the Creatives Department and learning a lot along the way with loads of fun!'}
