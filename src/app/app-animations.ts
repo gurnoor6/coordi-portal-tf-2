@@ -68,6 +68,8 @@ export const routeAnimate=(
 
 		]))),
 
+		transition('*=>memories',animate('0s')),
+
 		transition('*<=>*',animate('0.5s ease-in',keyframes([
 			style({opacity:"0",offset:0.0}),
 			style({opacity:"0.3",offset:0.2}),

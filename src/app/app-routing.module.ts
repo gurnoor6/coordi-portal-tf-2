@@ -14,7 +14,7 @@ const routes: Routes = [
 {path:'departmentdetail',component:DepartmentdetailComponent,data:{animation:'departmentdetail'}},
 {path:'departmentdetail/:dep',component:DepartmentdetailComponent,data:{animation:'departmentdetail'}},
 {path:'managerdetail/:dep',component:ManagerdetailComponent,data:{animation:'managerdetail'}},
-{path:'memories',component:CoordimemoriesComponent},
+{path:'memories',component:CoordimemoriesComponent,data:{animation:'memories'}},
 {path:'results',component:ResultsComponent,data:{animation:'results'}},
 ];
 

@@ -3,6 +3,7 @@ import {CurrentscreenService} from './currentscreen.service';
 import {translateRight,navAnimation,footerAnimation,routeAnimate} from './app-animations';
 import { RouterOutlet,ActivatedRoute, Router } from '@angular/router';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import {CommunicatorService} from './services/communicator.service';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ export class AppComponent implements OnInit {
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
-              private ngxService: NgxUiLoaderService){}
+              private ngxService: NgxUiLoaderService,
+              private commService:CommunicatorService){}
   ngOnInit(){
     this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId
     // Stop the foreground loading after 5s
@@ -95,5 +97,9 @@ export class AppComponent implements OnInit {
 
   redirectAnotherPage(link){
     window.location.href=link;
+  }
+
+  routeAnimationComplete(e){
+    this.commService.statusReceiver(e);
   }
 }

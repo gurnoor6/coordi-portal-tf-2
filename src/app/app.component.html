@@ -54,7 +54,7 @@
 <div class="main-container-mobile">
 
   <!-- <app-home></app-home> -->
-  <div [@routeAnimations]="prepareRoute(outlet)">
+  <div [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.done)="routeAnimationComplete($event)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 

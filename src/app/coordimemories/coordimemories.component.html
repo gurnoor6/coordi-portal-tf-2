@@ -1,5 +1,5 @@
-<div class="container">
-	<div class="row mb-5 memory-row" *ngFor="let m of memories_list">
+<div class="container" >
+	<div [@translate]="getState(m)" (@translate.done)="statusFalse($event)" class="row mb-5 memory-row" *ngFor="let m of memories_list">
 		<div class="col-12 col-md-4 text-center left-image">
 			<img src="{{m.image}}" class="coordi-image">
 		</div>
