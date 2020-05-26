@@ -57,7 +57,7 @@
     transition: width .4s;
 }
 
-.nav-item:last-child .nav-link:hover::after{
+.nav-item:nth-child(5) .nav-link:hover::after{
 	width:0;
 }
 
