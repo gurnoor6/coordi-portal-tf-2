@@ -5,7 +5,8 @@
 			<p class="text-center text-header mobile-text-results" *ngIf="mobile">RESULTS</p>
 		</div>
 		<div class="col-2">
-			<p><img class="cross" id="events-cross" (click)="redirect('')" src="/assets/cross.png"></p>
+			<p *ngIf="!mobile"><img class="cross" id="events-cross" (click)="redirect('')" src="/assets/cross.png"></p>
+			<p *ngIf="mobile"><img class="cross" id="events-cross-mobile" (click)="redirect('')" src="/assets/cross.png"></p>
 		</div>
 	</div>
 
