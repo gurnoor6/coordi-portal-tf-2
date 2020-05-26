@@ -1,10 +1,10 @@
 <div class="container-fluid" *ngIf="eventspage">
 	<div class="row"  *ngIf="!mobile">
-		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
-			<img src="assets/events_scroll.png" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: 20%" class="single-pics">
-			<img src="assets/multiple_photos.png" (mouseleave) = "showOtherImage()" [class.d-none]="!multiple" style="width:100%; object-fit: cover;margin-top: 0%" class="multiple-pics">
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-5">
+			<img src="assets/departments/{{current_event.image}}" (mouseenter) = "showOtherImage()"  [class.d-none]="multiple" style="width:100%; object-fit: cover;margin-top: -5%" class="single-pics">
+			<img src="assets/departments/{{current_event.image2}}" (mouseleave) = "showOtherImage()" [class.d-none]="!multiple" style="width:100%; object-fit: cover;margin-top: -8%;transform: scale(1.1)" class="multiple-pics">
 		</div>
-		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-7">
+		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-6">
 			<div class="text">
 				<div class="row" style=" border-bottom:2px solid white;padding-bottom: 0; margin-bottom: 16px;">
 					<div class="col-10">
@@ -41,6 +41,8 @@
 	</div>
 </div>
 
+
+<!-- Pages other than event because they contain only one category -->
 <div class="container-fluid" *ngIf="!eventspage">
 	<div class="row justify-content-center"  *ngIf="!mobile">
 		<div [@fade]="trigger" (@fade.done)="callbackHandler()" class="col-12 col-md-4">
