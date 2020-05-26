@@ -295,7 +295,7 @@ body{
 		margin-top: 32px;
 	}
 
-	.body-mobile-class{
+	body.body-mobile-class{
 		background: url("/assets/backg_phone.png");
 		overflow:hidden;
 		/*background-size: contain;*/
@@ -307,7 +307,7 @@ body{
 	  	max-width:100vw;
 	}
 
-	.body-ios-mobile{
+	body.body-ios-mobile{
 		background: url("/assets/backg_phone.png");
 		overflow:hidden;
 		/*background-size: contain;*/
