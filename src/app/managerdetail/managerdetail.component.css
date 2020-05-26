@@ -163,6 +163,22 @@
 	margin-left: 25%;
 }
 
+#creatives-head-new{
+	max-width:75%;
+	margin-left: 20%;
+	margin-bottom:-2%;
+}
+
+#new-creatives-cross{
+	transform: translate3d(225%,-25%,0);
+	transition: 0.5s;
+}
+
+#new-creatives-cross:hover{
+	transform: translate3d(225%,-25%,0) rotate(90deg);
+	transition: 0.5s;
+}
+
 #media-head{
 	max-width:90%;
 	margin-left: 15%;
