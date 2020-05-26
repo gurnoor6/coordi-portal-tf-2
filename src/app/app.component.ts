@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   stateRegister='show';
   footer=true;
   mobile=false;
+  overflowHidden=true;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
@@ -64,6 +65,13 @@ export class AppComponent implements OnInit {
       this.mobile=true;
     else
       this.mobile=false;
+
+    if(window.innerWidth>1070){
+      this.overflowHidden=true;
+    }
+    else{
+       this.overflowHidden=false;
+    }
 
   }
 

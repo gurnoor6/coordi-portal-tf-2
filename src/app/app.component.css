@@ -335,3 +335,7 @@ body{
 	opacity:1;
 	transition:0.25s ease-in-out;
 }
+
+.hide-overflow{
+	overflow-y:hidden;
+}
