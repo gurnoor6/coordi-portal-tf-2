@@ -105,7 +105,8 @@ export class AppComponent implements OnInit {
   }
 
   redirectAnotherPage(link){
-    window.location.href=link;
+    // window.location.href=link;
+    window.open(link);
   }
 
   routeAnimationComplete(e){
