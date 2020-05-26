@@ -1,5 +1,5 @@
 <ngx-ui-loader fgsType="rectangle-bounce-pulse-out" fgsColor="#0a193b" pbColor="#0a193b"></ngx-ui-loader>
-<body [class.hide-overflow]="overflowHidden">
+<body [class.hide-overflow]="overflowHidden" [class.safari-class]="isSafari" [class.body-mobile-class]="bodyMobile" [class.body-ios-mobile]="!bodyMobile">
 <div class="main-container">
 <nav @navAnimation class="navbar navbar-expand-lg bg-dark navbar-dark transparent-nav">
   <!-- Brand -->

@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   overflowHidden=true;
   showx = false;
   isSafari=false;
+  bodyMobile=true;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
@@ -37,6 +38,10 @@ export class AppComponent implements OnInit {
       this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
     }, 1000);
   	setInterval(()=>{this.changeOrder()});
+    console.log(this.getMobileOperatingSystem());
+    if(this.getMobileOperatingSystem()=="iOS"){
+        this.bodyMobile=false;
+    }
   }
 
 
@@ -76,7 +81,7 @@ export class AppComponent implements OnInit {
     }
 
     var is_safari = navigator.userAgent.indexOf("Safari")
-    if(is_safari==104 && this.mobile==true){
+    if(is_safari==104 && this.mobile==false){
       this.isSafari=true;
     }
     else
@@ -123,5 +128,25 @@ export class AppComponent implements OnInit {
 
   showCross(){
     this.showx?this.showx=false:this.showx=true;
+  }
+
+  getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+      if (/windows phone/i.test(userAgent)) {
+          return "Windows Phone";
+      }
+
+      if (/android/i.test(userAgent)) {
+          return "Android";
+      }
+
+      // iOS detection from: http://stackoverflow.com/a/9039885/177710
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
+      }
+
+      return "unknown";
   }
 }
