@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   mobile=false;
   overflowHidden=true;
   showx = false;
+  isSafari=false;
   constructor(private cs : CurrentscreenService,
               private route : ActivatedRoute,
               private router:Router,
@@ -73,6 +74,14 @@ export class AppComponent implements OnInit {
     else{
        this.overflowHidden=false;
     }
+
+    var is_safari = navigator.userAgent.indexOf("Safari")
+    if(is_safari==104){
+      this.isSafari=true;
+    }
+    else
+      this.isSafari=false;
+    // console.log(is_safari);
 
   }
 

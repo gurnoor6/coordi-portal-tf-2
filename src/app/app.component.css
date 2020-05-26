@@ -96,8 +96,15 @@ body{
    min-height:100vh;
   	max-width:100vw;
   	overflow-x:hidden;
+
   	/*border:2px solid red;*/
   	/*overflow: hidden;*/
+}
+
+.safari-class{
+	background-repeat: repeat-y;
+	background-attachment: scroll;
+	background-size: contain;
 }
 
 
