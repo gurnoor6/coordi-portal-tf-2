@@ -35,6 +35,7 @@ export class DepartmentsComponent implements OnInit {
   	let element_num = event['path'][2].children[1];
   	element_description.classList.add('text-name-hover');
   	element_num.classList.add('border-white');
+
   }
 
   
@@ -43,6 +44,7 @@ export class DepartmentsComponent implements OnInit {
   	let element_num = event['path'][2].children[1];
   	element_description.classList.remove('text-name-hover');
   	element_num.classList.remove('border-white');
+	  
   }
 
   redirect(link){

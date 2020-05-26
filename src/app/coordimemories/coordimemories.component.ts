@@ -22,13 +22,13 @@ export class CoordimemoriesComponent implements OnInit {
 
   getState(m){
 	let status = this.commService.giveStatus();
-	if(status && m.id!="02"){
+	if(status && m.id%2!=0){
 		return "right";
 	}
 
-	if (status && m.id=="02")
+	if (status && m.id%2==0)
 		return "left";
-	
+
 	return "none";
   }
 
