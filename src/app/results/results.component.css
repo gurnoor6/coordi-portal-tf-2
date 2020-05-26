@@ -19,7 +19,7 @@
 }
 
 .cross:hover{
-	transform: rotate(90deg);
+	transform: translateY(4px) rotate(90deg);
 	transition: 0.5s;
 }
 
