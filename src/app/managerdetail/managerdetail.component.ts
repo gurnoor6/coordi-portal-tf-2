@@ -29,7 +29,8 @@ export class ManagerdetailComponent implements OnInit {
    		name = 'https://api.whatsapp.com/send?phone=+91'+name;
    	}
    	if(name.includes('http'))
-   		window.location.href=name;
+   		// window.location.href=name;
+      window.open(name);
   	this.router.navigate([name]);
   }
 
@@ -43,7 +44,8 @@ export class ManagerdetailComponent implements OnInit {
   whatsapp(number){
   	number = number.replace(' ','');
    	number = number.replace(' ','');
-   	window.location.href='https://api.whatsapp.com/send?phone=+91'+number;
+   	// window.location.href='https://api.whatsapp.com/send?phone=+91'+number;
+    window.open('https://api.whatsapp.com/send?phone=+91' + number, '_blank');
   }
 
 }
