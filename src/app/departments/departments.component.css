@@ -128,10 +128,11 @@
   object-position: top;
 }
 
-.glide-img:hover{
-  transform: scale(1.1);
-  transition: 0.25s ease-out;
-
+@media screen and (min-width:675px){
+  .glide-img:hover{
+    transform: scale(1.1);
+    transition: 0.25s ease-out;
+  }
 }
 
 .glide-container{
