@@ -307,3 +307,6 @@
   }
   
 
+.glide__slide:nth-child(2) img{
+  object-position: bottom;
+}

@@ -159,6 +159,12 @@
 	height:80px;
 }
 
+@media screen and (max-width:1280px){
+	#infra-container-head,#marketing-container-head{
+		max-width:80vw;
+	}
+}
+
 #hospitality-head{
 	max-width:100%;
 	margin-left: 10%;
