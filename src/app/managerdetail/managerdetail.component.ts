@@ -23,6 +23,11 @@ export class ManagerdetailComponent implements OnInit {
   }
 
    redirectTo(name){
+   	name = name.replace(' ','');
+   	name = name.replace(' ','');
+   	if(name.length==10){
+   		name = 'https://api.whatsapp.com/send?phone=+91'+name;
+   	}
    	if(name.includes('http'))
    		window.location.href=name;
   	this.router.navigate([name]);
@@ -33,6 +38,12 @@ export class ManagerdetailComponent implements OnInit {
   		this.mobile=true;
   	else
   		this.mobile=false;
+  }
+
+  whatsapp(number){
+  	number = number.replace(' ','');
+   	number = number.replace(' ','');
+   	window.location.href='https://api.whatsapp.com/send?phone=+91'+number;
   }
 
 }
