@@ -76,7 +76,7 @@ export class AppComponent implements OnInit {
     }
 
     var is_safari = navigator.userAgent.indexOf("Safari")
-    if(is_safari==104){
+    if(is_safari==104 && this.mobile==true){
       this.isSafari=true;
     }
     else
