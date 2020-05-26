@@ -14,20 +14,34 @@
 	</div>
 </div>
 
-<div class="row justify-content-center main-div" *ngIf="screen=='home'">
-	<div class="col-12 col-sm-10 col-md-8">
+<div class="row justify-content-center main-div" *ngIf="screen=='home'" id="coordi-div">
+	<div class="col-12 col-sm-10 col-md-9">
 		<p @animateHead class="head text-center text-md-left" *ngIf="screen=='home'"><img src="assets/cp_title.png" id="cpimg"></p>
 		<div class="row">
 			<div @animateHead class="col-2 divi text-md-right d-none d-md-inline-block">
 				<p class="line"></p>
 			</div>
-			<div @animateContent class="col-12 col-md-10 text-center text-md-left">
-				<p class="description-text">"Techfest is what the team wants." This line has been passed down through each and every team ever since the conception of Techfest in 1998. In these unprecedented times, Team Techfest is on the lookout for highly motivated individuals with fresh perspectives, innovative ideas and a whole lot of enthusiasm! So come, join Team Techfest, and gain insights about how things work behind the scenes of one of the largest Sci-Tech festivals in the world, all while having fun and learning new skills!</p>
-
+			<div @animateContent class="col-12 col-md-10 text-center text-md-left" id="animation-container">
+				<div class="text-div" style="margin-left:0">
+					<p class="description-text">You are the steam that blows our engine get onboard!</p>
+					<p class="description-text">Don't be a guest to your own fest</p>
+					<p class="description-text">It starts with you</p>
+				</div>
+				<div class="row animated-text text-uppercase">
+					<div class="d-inline-block">
+						<p class="lighter">You are</p>
+					</div>
+					<div class="d-inline-block animated-main-text">
+						<p #text1 class="text1class">Amazing</p><br><p class="text2class">Great</p><br><p class="text3class">part of Techfest</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	
 	</div>
+
+	
+
 </div>
 
 <div class="row justify-content-center main-div" *ngIf="screen=='departments'">

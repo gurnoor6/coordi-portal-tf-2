@@ -8,9 +8,15 @@
 	margin-top:48px;
 }
 
+
 .description-text{
 	color:#ffffff;
 	font-size:24px;
+	margin-left:0;
+}
+
+.description-text:nth-child(1),.description-text:nth-child(2){
+	margin-bottom: 0;
 }
 .line{
 	/*width:20px;*/
@@ -60,4 +66,114 @@
 		font-size:16px;
 	}
 }
+
+
+/********Block ***********/
+@keyframes slideDown1{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+@keyframes slideDown{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+@keyframes slideDownlast{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+.text1 {
+	animation-name: slideDown1;
+	opacity: 0;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+
+.text2 {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	animation-name: slideDown;
+	animation-delay: 0s;
+	animation-duration: 2s;
+	animation-direction: reverse;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+.text3 {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	animation-name: slideDownlast;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-direction: reverse;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+
+.text1class,.text2class,.text3class{
+	opacity:0;
+}
+
+@keyframes showlast {
+	0% {opacity: 0;}
+	99% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.animated-text{
+	color:#fff;
+	overflow: hidden;
+	font-size: 48px;
+	width:100%; 
+	position:relative;
+	overflow:hidden;
+	height:100px;
+
+}
+
+.lighter{
+	opacity: 0.4;
+}
+
+.animated-main-text{
+	position: relative;
+	padding-left: 12px;
+	min-width:70%;
+	font-weight:bold;
+}
+
+.text-div{
+	transform: translateX(-15px);
+}
+
+@media screen and (max-width:1150px){
+	.animated-text{
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 675px){
+	.animated-text{
+		font-size: 20px;
+		padding-left:7.5%;
+		margin:auto;
+	}
+
+	.animated-main-text{
+		margin:auto;
+		padding-left: 5px;
+	}
+
+	.text-div{
+		transform: translateX(0px);
+	}
+
+}
+
+
+
+
 

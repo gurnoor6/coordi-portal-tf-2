@@ -38,7 +38,6 @@ export class AppComponent implements OnInit {
       this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
     }, 1000);
   	setInterval(()=>{this.changeOrder()});
-    console.log(this.getMobileOperatingSystem());
     if(this.getMobileOperatingSystem()=="iOS"){
         this.bodyMobile=false;
     }
