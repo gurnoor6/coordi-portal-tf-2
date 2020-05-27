@@ -111,7 +111,7 @@ export class DepartmentdetailComponent implements OnInit {
   	}
 
   	if(target=='showPrevious'){		//show==showNext
-  		this.current_index=(5+this.current_index-1)%6;
+  		this.current_index=(this.current_index-1+6)%6;
   	}
 
   	this.activeDotHandler();

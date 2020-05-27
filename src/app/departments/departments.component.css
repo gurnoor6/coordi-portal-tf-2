@@ -311,3 +311,15 @@
 .glide__slide:nth-child(2) img{
   object-position: bottom;
 }
+
+
+/*Added in last*/
+/*
+.text-num{
+    display: none;    
+}
+
+.text-name{
+  border-top:2px solid #fff;
+  margin-top:16px;
+}*/
