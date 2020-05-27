@@ -12,36 +12,12 @@ import {fade,slide,animateHead,animateContent} from './home-animations';
     animateContent
   ]
 })
-export class HomeComponent implements OnInit,AfterViewInit {
+export class HomeComponent implements OnInit {
   screen='home';
   constructor(private cs:CurrentscreenService) { }
 
   ngOnInit(): void {
   	setInterval(()=>{this.setScreen()});
-  }
-
-  ngAfterViewInit(){
-    let p = document.querySelector('.text1class');
-    p.classList.add('text1');
-    console.log(p)
-    p.addEventListener('animationend',function(){
-      p.classList.remove('text1');
-      document.querySelector('.text2class').classList.add('text2');
-    })
-
-    let p2 = document.querySelector('.text2class');
-    p2.addEventListener('animationend',function(){
-      p2.classList.remove('text2');
-      document.querySelector('.text3class').classList.add('text3');
-    })
-
-    let p3 = document.querySelector('.text3class');
-    p3.addEventListener('animationend',function(){
-      p3.classList.remove('text3');
-      document.querySelector('.text1class').classList.add('text1');
-    })
-
-
   }
 
   setScreen(){
