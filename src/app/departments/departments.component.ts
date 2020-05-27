@@ -31,10 +31,13 @@ export class DepartmentsComponent implements OnInit {
 
 
   zoomIn(event){
+  	// console.log(event)
   	let element_description = event['path'][2].children[2];
   	let element_num = event['path'][2].children[1];
   	element_description.classList.add('text-name-hover');
-  	element_num.classList.add('border-white');
+
+  	let element_text = event['path'][2].children[2].children[0];
+  	element_text.classList.add('lower-text-hover');
 
   }
 
@@ -44,6 +47,9 @@ export class DepartmentsComponent implements OnInit {
   	let element_num = event['path'][2].children[1];
   	element_description.classList.remove('text-name-hover');
   	element_num.classList.remove('border-white');
+  	
+  	let element_text = event['path'][2].children[2].children[0];
+  	element_text.classList.remove('lower-text-hover');
 	  
   }
 

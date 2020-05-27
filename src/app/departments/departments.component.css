@@ -159,10 +159,10 @@
   transition:0.2s ease-in;
 }
 
-.text-name-hover{
+/*.text-name-hover{
   transform: translateY(8px);
   transition:0.2s ease-out;
-}
+}*/
 
 .border-white{
   border-bottom: 2px solid white;
@@ -314,12 +314,26 @@
 
 
 /*Added in last*/
-/*
+
 .text-num{
     display: none;    
 }
 
 .text-name{
-  border-top:2px solid #fff;
+  border-top:2px solid rgba(256,256,256,0.5);
   margin-top:16px;
-}*/
+}
+
+.text-name-hover{
+  border-top:2px solid rgba(256,256,256,1);  
+}
+
+.lower-text-hover{
+  transform: translateY(8px);
+  transition:0.2s ease-out;
+}
+
+.lower-text{
+  transition:0.2s ease-in-out;
+  display: inline-block;
+}
